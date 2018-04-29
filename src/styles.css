@@ -1,1 +1,48 @@
 /* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css?family=Josefin+Sans:100,300,400,600,700');
+/*@import url('https://fonts.googleapis.com/css?family=IBM+Plex+Sans:100i');*/
+@import url('https://fonts.googleapis.com/css?family=IBM+Plex+Sans:700i');
+
+#body{
+    background: #e9ebee;
+    /*font: 'Open Sans', sans-serif; */
+    font: 14px/1.21 Roboto, 'Helvetica Neue', arial, helvetica, sans-serif;
+    /*max-width: 1800px;*/
+}
+
+.bg-success{
+    background: #17C671 !important;
+}
+
+.bg-primary{
+    background: #30D5C7 !important;
+}
+
+.bg-default{
+    background: #032747 !important;
+    color: #F4F1EA !important ;
+}
+
+.bg-secondary{
+    background: #F4F1EA !important;
+}
+
+.bg-info{
+     background: #00B8D8 !important;
+}
+
+.bg-warning{
+     background: #FFB400 !important;
+}
+
+.bg-danger{
+    background: #C4183C !important;
+}
+
+.bg-light{
+    background: #E9ECEF !important;
+}
+
+.bg-dark{
+    background: #212529 !important;
+}

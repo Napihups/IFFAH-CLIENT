@@ -1,0 +1,118 @@
+#body {
+    background-color: #e9ebee;
+}
+.login{
+    position: absolute;
+   font-family: 'Josefin Sans', sans-serif;
+   /*background: #30D5C7;*/
+   /*background: #032747;*/
+   /*padding:70px 0px;*/
+   height: 100vh;
+   width: 100vw;
+   /*justify-content: center;*/
+   background: #032747; /* fallback for old browsers */
+  background: -webkit-linear-gradient(to bottom, #032747, #032747); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to bottom, #032747, #032747);
+}
+
+.logo{
+    position: relative;
+    margin-top: 100px;
+}
+
+
+.login-header-text{
+    margin-top: 20px;
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 17px;
+    font-weight: 400;
+    color: #30D5C7;
+} 
+
+.login-header-text a{
+    color: #F4F1EA;
+}
+
+.form{
+    margin: 0 auto;
+    width: 350px;
+}
+
+.form .form-group {
+    margin-bottom: 20px;
+}
+
+.form .form-control{
+    /*height: 30px;*/
+}
+
+input .form-control:focus{
+    border: none !important;
+}
+
+input .form-control:hover{
+    border: none !important;
+}
+
+
+.checkbox {
+    text-align: left;
+    float: left;
+    margin-bottom: 20px;
+    position: relative;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+    width: 100%;
+}
+.checkbox.show:before {
+    color: #30D5C7;
+    background: pink;
+    font-size: 17px;
+    margin: 1px 0 0 3px;
+    position: absolute;
+    pointer-events: none;
+    /*font-family: 'Glyphicons Halflings';*/
+}
+.checkbox .character-checkbox {
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
+    border-radius: 3px;
+    border: 1px solid #ccc;
+    vertical-align: middle;
+    display: inline-block;
+}
+.checkbox .label {
+    color: #30D5C7;
+    font-size: 13px;
+    font-weight: normal;
+}
+
+.tick {
+    margin-top: 4px;
+    margin-left: 4px;
+    color: #30D5C7;
+}
+
+a.btn-login{
+    width: 100%;
+    background: #30D5C7;
+    font-size: 17px;
+    font-family: 'Josefin Sans', sans-serif; 
+    font-weight: 600;
+    color: #032747;
+}
+
+a.btn-login:hover{
+    background: #032747;
+    border: 1px solid #30D5C7;
+    color: #30D5C7 !important;
+}
+
+
+.forgot a{
+    color: #30D5C7 !important;
+}
