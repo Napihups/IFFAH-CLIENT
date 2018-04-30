@@ -5,6 +5,7 @@ import { RepositoryComponent } from './components/repository/repository.componen
 import { UserMainComponent } from './components/user-main/user-main.component';
 import { UserModuleRouting } from './user-module.routing';
 import { NavbarComponent } from './components/navbar/navbar.component';
+import { NoticeBoardComponent } from './components/notice-board/notice-board.component';
 
 @NgModule({
   imports: [
@@ -14,7 +15,7 @@ import { NavbarComponent } from './components/navbar/navbar.component';
   declarations: [
   	ProfileComponent, 
   	RepositoryComponent, 
-  	UserMainComponent, NavbarComponent
+  	UserMainComponent, NavbarComponent, NoticeBoardComponent
   ]
 })
 export class UserModule { }
