@@ -7,6 +7,36 @@
 	/*padding-right: 0px !important;*/
 }
 
+.btn-right-nav{
+	/*margin-top: 20px;*/
+	width: 100%;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	/*background: #032747;*/
+	background: white;
+	/*color: #30D5C7;*/
+	color: #032747;
+	font-weight: bold;
+	font-size: 15px;
+	border-radius: 0px;
+	text-align: left;
+	transition: 0.1s;
+}
+
+
+.profile-bar .btn-group-vertical{
+	/*border-top-right-radius: 30px;*/
+	width: 100% !important;
+}
+
+.btn-right-nav:hover{
+	/*background: #041c35;*/
+	/*background: transparent;*/
+	/*border-bottom: 1px solid #30D5C7 !important;*/
+	background: #071f38;
+	color: #2abbaf;
+}
+
 .card.card-body.avatar-canvas{
 	margin-top: 70px;
 	padding: 20px 10px !important;
