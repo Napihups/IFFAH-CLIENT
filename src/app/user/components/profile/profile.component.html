@@ -1,0 +1,363 @@
+
+<div class="container-fluid" style="background: ; height: 100vh;">
+	<div class="row">
+
+
+		<div class="col-md-10" style="background:">
+			<div class="row">
+				<div class="col-md-3 profile-bar text-center">
+					<div class="card card-body avatar-canvas">
+						<img src="../../../assets/images/profile.jpg" class="img-fluid">
+						<div class="title-box">
+							<h1 class="pofile-name">Napihup</h1>
+							<p class="lead">Yakub Family</p>
+						</div>
+						<div class="form-group">
+							<button class="v-family-btn btn btn-md"> View Family</button>
+						</div>
+						
+					</div>
+				</div>
+				<div class="col-md-9 profile-content">
+					<div class="tab-container">
+						<ul class="nav">
+							<!--- USE navtab-active class for active -->
+						  <li class="nav-item">
+						    <a [class.navtab-active] = "activeTab === 'profile'" class="nav-link " 
+						    (click)="setActiveTab('profile')">
+						    <i class="fas fa-user-circle"></i> Profile</a>
+						  </li>
+						  <li class="nav-item">
+						    <a [class.navtab-active] = "activeTab === 'skills'" class="nav-link" (click)="setActiveTab('skills')" >
+						    <i class="fab fa-hubspot"></i> Skills</a>
+						  </li>
+						  <li class="nav-item">
+						    <a [class.navtab-active] = "activeTab === 'employment'" class="nav-link" (click)="setActiveTab('employment')" >
+						    	<i class="fas fa-briefcase"></i> Employment</a>
+						  </li>
+						  
+						</ul>
+
+						<!-------------------------  ABOUT ME TAB CONTENT ---------------------------->
+						<div class="tab-content">
+							
+							
+			
+							<div [ngSwitch]="activeTab" class="container float-left" style="background:">
+
+									<!----------------- Profile Tab clicked ---------------------->
+									<ng-template [ngSwitchCase]= "'profile'">
+											<div id="main-profile-card" class="card card-body mb-3">
+												<div class="container-fluid">
+													<div class="row profile-section text-left">
+														
+														  <div class="col-lg-7 col-md-7 col-sm-7">
+												            <h3 class="profile-card-header">Profile details : </h3>
+												            <h5>Muhammad Hanafi </h5> 789/90 , Lane Here, New York,
+												            <br /> United States <br />
+												            <p class="bold-text"><span>D.O.B:</span> 9 july 1993</p>
+												           
+												          </div>
+												          <div class="col-lg-5 col-md-5 col-sm-5">
+												            <h3 class="profile-card-header">Contact :</h3>
+												             Mob: +1-99-88-77-55 <br />
+												             Home: +65 91782342
+												            <br>email: <a href="#">info@domainname.com</a>
+												          </div>
+														
+													</div>
+													<div class="row profile-section text-right">
+														<div class="btn-group ml-auto">
+															<button class="btn btn-sm profile-edit-btn">edit</button>
+															<button class="btn btn-sm profile-private-setting-btn">
+															Privacy <i class="fas fa-wrench"></i></button>
+														</div>
+														
+													</div>
+												</div>
+											</div>
+
+											<div id ="aboutme-card" class="card">
+												<div class="card-header text-left p-2">
+													<h1 class="card-title d-inline"> A little things about me</h1>
+														
+														<p class="d-inline float-right add-about-icon">Add Item
+														</p>
+													 
+												</div>
+												<div class="card-body">
+													<div id="edu-card" class="card-divider text-left">
+														<i class="fas fa-graduation-cap d-inline card-icon"></i>
+														<p class="d-inline">Study at <strong>Republic poly
+														 </strong><span style="font-style: italic">in 2018</span></p>
+														 <p class="d-inline float-right edit-icon">edit</p>
+														
+														 <br>
+														 <p class="text-muted" style="font-style: italic">Diploma in Material sciences</p>
+														 
+													</div>
+
+													<div id="bio-card" class="card-divider text-left">
+														<i class="fab fa-cloudsmith d-inline card-icon "></i>
+														<span class="d-inline bio-text"> Bio</span>
+														<p class="d-inline float-right edit-icon">edit</p>
+														<br>
+														<p class="d-inline">&nbsp; &nbsp; &nbsp; &nbsp; - Napihup is the co-founder of Content Snare and Aktura Technology. Once a web designer, his new priority is to help web designers and developers regain their lives, work less and get better clients.
+
+														He does this by writing helpful posts,
+														 building software and working with web designers to deliver 
+														the complex web development that they don't normally handle.
+														</p>
+															 
+													</div>
+
+													<div id="hobby-card" class="card-divider text-left">
+														<i class="far fa-thumbs-up d-inline card-icon "></i>
+														
+														<p class="d-inline float-right edit-icon">edit</p>
+														<br>
+
+														 
+														<nav class="nav nav-pills flex-column flex-sm-row">
+															<p class="flex-sm-fill text-sm-center  nav-link">
+																<i class="fas fa-code"></i> Coding
+															</p>
+															<p class="flex-sm-fill text-sm-center  nav-link">
+																<i class="fas fa-gamepad"></i> Gaming
+															</p>
+															<p class="flex-sm-fill text-sm-center  nav-link">
+																<i class="fas fa-utensils"></i> Eating
+															</p>
+															<p class="flex-sm-fill text-sm-center  nav-link">
+																<i class="fab fa-hotjar"></i> Cooking
+															</p>
+
+
+
+														</nav>
+														<a class="add-about-icon" href="#"><i class="fas fa-plus"></i> Add more</a>
+
+													</div>
+												</div>
+											</div>
+
+
+									</ng-template>
+
+									<!----------------- Skills Tab clicked ---------------------->
+									<ng-template [ngSwitchCase]= "'skills'">
+											
+											<div class='container skills'>
+												<div class="container-fluid">
+													<div class="row">
+														<button class="add-skill-btn btn btn-sm ml-auto">Add Skill</button>
+													</div>
+													
+													<div class="row">
+
+														<div class="card card-body skill-card text-left">
+															<h1 class=""> <i class="fab fa-hubspot"></i> HTML
+															 <p class="float-right remove-skill-icon">Remove</p></h1>
+															<p>This is the decription of the skill that i have about css</p>
+														</div>
+														<div class="card card-body skill-card text-left">
+															<h1 class=""> <i class="fab fa-hubspot"></i> Css
+																<p class="float-right remove-skill-icon">Remove</p>
+															 
+															</h1>
+															<p>when an unknown printer took a galley of type and scrambled it to make a type specimen book.passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+														</div>
+														<div class="card card-body skill-card text-left">
+															<h1 class=""> <i class="fab fa-hubspot"></i> Right-wing Soccer
+															 <p class="float-right remove-skill-icon">Remove</p></h1>
+															<p>I am a right-wing soccer layer, fast run and able to chase ball that fast !!!</p>
+														</div>
+														<div class="card card-body skill-card text-left">
+															<h1 class=""> <i class="fab fa-hubspot"></i> Microsoft Office
+															 <p class="float-right remove-skill-icon">Remove</p></h1>
+															<p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).</p>
+														</div>
+														<div class="card card-body skill-card text-left">
+															<h1 class=""> <i class="fab fa-hubspot"></i> Customer Relationship
+															<p class="float-right remove-skill-icon">Remove</p></h1>
+															<p>This is the decription of the skill that i have about css</p>
+														</div>
+														<div class="card card-body skill-card text-left">
+															<h1 class=""> <i class="fab fa-hubspot"></i> Classical Fingerstyle Guitar
+															<p class="float-right remove-skill-icon">Remove</p></h1>
+															<p>This is the decription of the skill that i have about css</p>
+														</div>
+														<div class="card card-body skill-card text-left">
+															<h1 class=""> <i class="fab fa-hubspot"></i> House chores and errands
+															 <p class="float-right remove-skill-icon">Remove</p></h1>
+															<p>I can do all Chores like laundry, sweeping, vacuum dish-washing and kitchen cleaning. Also can take care of old-folk and kids at home.</p>
+														</div>
+														<div class="card card-body skill-card text-left">
+															<h1 class=""> <i class="fab fa-hubspot"></i> Java
+															<p class="float-right remove-skill-icon">Remove</p></h1>
+															<p>I did lost of java based app using spring framework and con-currency patterns.</p>
+														</div>
+														<div class="card card-body skill-card text-left">
+															<h1 class=""> <i class="fab fa-hubspot"></i> Spring - java
+															 <p class="float-right remove-skill-icon">Remove</p></h1>
+															<p>Popular java framework for web development and i have good foundation on its core framework architecture.</p>
+														</div>
+														
+													</div>
+												</div>
+											</div>
+									</ng-template>
+
+									
+									<!----------------- Employment Tab clicked ---------------------->
+									<ng-template [ngSwitchCase]= "'employment'">
+
+											<div id ="employmenttab" class="container-fluid">
+												<div class="row">
+														<button class="add-employment-btn btn btn-sm ml-auto">Add employment</button>
+														
+												</div>
+												<div class="row">
+													 <div class="card card-body text-left">
+													 	
+
+													 	<h1 class="">
+													 		<span class="float-left current">Current </span>
+													 	 Cognizant Solution Pte Ltd 
+
+													 		<p class=" float-right edit-emp-icon">edit</p>
+													 		<p style="margin-top: 10px" class="text-muted addr-text"> -  Changi business park 73456 #34 bldg 1</p>
+													 	</h1>
+
+													 	<table class="emp-table">
+													 		<tr>
+													 			<td class="table-head">Designation: </td>
+													 			<td>Software engineer</td>
+													 			<td class="table-head">Estimate Gross : </td>
+													 			<td><span class='income-badge'>$ 413,000.00</span> (SGD)</td>
+													 			
+													 		</tr>
+													 		<tr>
+													 			<td class="table-head">Years Experience : </td>
+													 			<td>17 years</td>
+													 			<td class="table-head">Since : </td>
+													 			<td>10th Oct 2017</td>
+													 		</tr>
+													 		<tr>
+													 			<td class="table-head">Resignation : </td>
+													 			<td>Not application</td>
+													 	
+													 		</tr>
+													 		
+													 		
+													 	</table>
+
+													 	<h4 class="secondary-header">Functions and description</h4>
+													 	<p class=""> &nbsp; &nbsp; &nbsp; &nbsp; Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, <br> making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage</p>
+													 	
+														
+
+													 </div>
+
+													 <!-- Employment divider -->
+													 <div class="card card-body text-left">
+													 	
+
+													 	<h1 class="">
+													 		<!-- <span class="float-left current">Current </span> -->
+													 	 Nucleus Software Solution 
+
+													 		<p class=" float-right edit-emp-icon">edit</p>
+													 		<p style="margin-top: 10px" class="text-muted addr-text"> -  UOB alexandra 73456 #34 bldg 1</p>
+													 	</h1>
+
+													 	<table class="emp-table">
+													 		<tr>
+													 			<td class="table-head">Designation: </td>
+													 			<td>Programmer analyst</td>
+													 			<td class="table-head">Estimate Gross : </td>
+													 			<td><span class='income-badge'>$ 3100.00</span> (SGD)</td>
+													 			
+													 		</tr>
+													 		<tr>
+													 			<td class="table-head">Years Experience : </td>
+													 			<td>6 months</td>
+													 			<td class="table-head">Since : </td>
+													 			<td>3rd March 2017</td>
+													 		</tr>
+													 		<tr>
+													 			<td class="table-head">Resignation : </td>
+													 			<td>3rd March 2018</td>
+													 	
+													 		</tr>
+													 		
+													 		
+													 	</table>
+
+													 	<h4 class="secondary-header">Functions and description</h4>
+													 	<p class="">  &nbsp; &nbsp; &nbsp; &nbsp; omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. <br>Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?"</p>
+													 	
+														
+
+													 </div>
+													 <!-- -->
+												
+
+
+												</div>
+											</div>
+
+									</ng-template>
+
+
+									
+		
+							</div>
+							
+						</div>	
+
+
+										
+					</div>
+					
+				</div>
+			</div>
+		</div>
+
+
+<!---------------------------------------------------------------------------------------->
+		<div class="col-md-2 right-component">
+			
+			<h1 class="side-bar-header">Contacts</h1>
+			<ul class="list-group-item online-list">
+
+				<!-- <p class="text-muted right-bar-text">You don't have any friends,<br><a href="#"> add new friends ?</a></p> -->
+				<li class="list-item">
+					<a href="#">
+						<span class="d-inline avatar">M</span><p class="d-inline">Napihup</p> <span class="flag-dot bg-success d-inline"></span>
+					</a>
+				</li>
+				<li class="list-item">
+					<a href="#">
+						<span class="d-inline avatar">HN</span><p class="d-inline">Napihup</p> <span class="flag-dot bg-warning d-inline"></span>
+					</a>
+				</li>
+				<li class="list-item">
+					<a href="#">
+						<span class="d-inline avatar">Af</span><p class="d-inline">Napihup</p> <span class="flag-dot bg-danger d-inline"></span>
+					</a>
+				</li>
+				<li class="list-item">
+					<a href="#">
+						<span class="d-inline avatar">M</span><p class="d-inline">Afifah</p> <span class="flag-dot bg-success d-inline"></span>
+					</a>
+				</li>
+				
+			</ul>
+			<div id="searchUserForm" class="form-group">
+				<input class="form-control" placeholder="Search">
+			</div>
+			
+		</div>
+	</div>
+</div>

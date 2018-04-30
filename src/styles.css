@@ -5,9 +5,11 @@
 
 #body{
     background: #e9ebee;
+    /*background: blue;*/
     /*font: 'Open Sans', sans-serif; */
     font: 14px/1.21 Roboto, 'Helvetica Neue', arial, helvetica, sans-serif;
     /*max-width: 1800px;*/
+    padding: 0px 0px;
 }
 
 .bg-success{
@@ -45,4 +47,33 @@
 
 .bg-dark{
     background: #212529 !important;
+}
+
+@media only screen and (min-width:1400px) {
+    .app-wrapper {
+        border-right: 0.5px solid #dadada;
+        width: 1400px;
+        margin: 0 auto;
+    }
+    .navbar-wrapper{
+      width: 1300px !important;
+      margin: 0 auto;
+    }
+}
+
+
+::-webkit-scrollbar {
+    width: 4px;  /* remove scrollbar space */
+    background: #dadada;  /* optional: just make scrollbar invisible */
+}
+/* optional: show position indicator in red */
+::-webkit-scrollbar-thumb {
+    background: #8c949c;
+    border-radius: 20px;
+    height: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #7b8288;
+    border-radius: 20px;
+    height: 10px;
 }
