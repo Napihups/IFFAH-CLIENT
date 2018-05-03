@@ -9,18 +9,23 @@
 
 .btn-right-nav {
 	/*margin-top: 20px;*/
+	margin: 5px 0px;
 	width: 100%;
 	padding-top: 10px;
 	padding-bottom: 10px;
 	/*background: #032747;*/
-	background: white;
+	background: #032747;
 	/*color: #30D5C7;*/
-	color: #414447 !important;
+	color: #30D5C7 !important;
 	font-weight: bold;
 	font-size: 15px;
-	border-radius: 0px;
-	text-align: left;
+	border-radius: 30px;
+	text-align: center;
 	transition: 0.1s;
+}
+
+.btn-right-nav span {
+	margin-left: 10px !important;
 }
 
 
@@ -30,11 +35,13 @@
 }
 
 .btn-right-nav:hover{
-	/*background: #041c35;*/
+	background: #30D5C7 !important;
 	/*background: transparent;*/
 	/*border-bottom: 1px solid #30D5C7 !important;*/
-	background: #032747;
-	color: #2abbaf !important;
+	/*background: #032747;*/
+	/*color: #2abbaf !important;*/
+	color: #032747 !important; 
+	 box-shadow: 0 2px 4px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
 }
 
 .card.card-body.avatar-canvas{
@@ -91,7 +98,7 @@
 	width: 100%;
 	/*height: 50px;*/
 	margin-top: 10px;
-	border-radius: 2px !important;
+	border-radius: 30px !important;
 	background: #30D5C7;
 	color: #F4F1EA !important;
 	/*font-family: 'Josefin Sans', sans-serif !important;*/

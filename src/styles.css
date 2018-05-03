@@ -2,12 +2,15 @@
 @import url('https://fonts.googleapis.com/css?family=Josefin+Sans:100,300,400,600,700');
 /*@import url('https://fonts.googleapis.com/css?family=IBM+Plex+Sans:100i');*/
 @import url('https://fonts.googleapis.com/css?family=IBM+Plex+Sans:700i');
+@import url('https://fonts.googleapis.com/css?family=Fredoka+One|Poppins:500');
 
 #body{
     background: #e9ebee;
     /*background: blue;*/
     /*font: 'Open Sans', sans-serif; */
-    font: 14px/1.21 Roboto, 'Helvetica Neue', arial, helvetica, sans-serif;
+    /*font: 14px/1.21 Roboto, 'Helvetica Neue', arial, helvetica, sans-serif;*/
+    font: 14px/1.5 'Poppins', sans-serif, cursive;
+    font-weight: lighter;
     /*max-width: 1800px;*/
     padding: 0px 0px;
 }
