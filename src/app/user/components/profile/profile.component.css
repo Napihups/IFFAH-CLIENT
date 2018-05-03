@@ -19,7 +19,7 @@
 	color: #30D5C7 !important;
 	font-weight: bold;
 	font-size: 15px;
-	border-radius: 30px;
+	border-radius: 5px;
 	text-align: center;
 	transition: 0.1s;
 }
@@ -27,6 +27,7 @@
 .btn-right-nav span {
 	margin-left: 10px !important;
 }
+
 
 
 .profile-bar .btn-group-vertical{
