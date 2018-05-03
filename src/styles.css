@@ -49,6 +49,10 @@
     background: #212529 !important;
 }
 
+.bg-purple{
+    background: #502f96 !important;
+}
+
 @media only screen and (min-width:1400px) {
     .app-wrapper {
         border-right: 0.5px solid #dadada;
@@ -76,4 +80,20 @@
     background: #7b8288;
     border-radius: 20px;
     height: 10px;
+}
+
+
+/* ----------------Layout for Right component (notice-board)----------- */
+.right-component {
+    /*background: pink;*/
+    min-width: 200px;
+    position: relative;
+    height: 100vh;
+    max-height: 100vh;
+    padding: 0px !important;
+    border-left: 1px solid #bdbfc2;
+/*   -webkit-box-shadow: -3px 1px 10px -2px rgba(187,189,189,1);
+-moz-box-shadow: -3px 1px 10px -2px rgba(187,189,189,1);
+box-shadow: -3px 1px 10px -2px rgba(187,189,189,1);*/
+
 }

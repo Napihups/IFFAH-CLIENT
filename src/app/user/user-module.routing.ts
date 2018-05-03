@@ -13,14 +13,17 @@ const route :Routes = [
 		children: [
 
 			{
-				path:'', component: ProfileComponent
+				path:'', component: RepositoryComponent
 			},
 			{
-				path:'profile', redirectTo: '', pathMatch: 'full'
+				path:'profile', component: ProfileComponent
 			},
 			{
 				path:'repository', component: RepositoryComponent
-			}
+			},
+			// {
+			// 	path: 'liabilities', component: LiabilitiesComponent
+			// }
 		]
 	}
 ]

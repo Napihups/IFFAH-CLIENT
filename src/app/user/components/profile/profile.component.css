@@ -7,7 +7,7 @@
 	/*padding-right: 0px !important;*/
 }
 
-.btn-right-nav{
+.btn-right-nav {
 	/*margin-top: 20px;*/
 	width: 100%;
 	padding-top: 10px;
@@ -15,7 +15,7 @@
 	/*background: #032747;*/
 	background: white;
 	/*color: #30D5C7;*/
-	color: #032747;
+	color: #414447 !important;
 	font-weight: bold;
 	font-size: 15px;
 	border-radius: 0px;
@@ -34,7 +34,7 @@
 	/*background: transparent;*/
 	/*border-bottom: 1px solid #30D5C7 !important;*/
 	background: #032747;
-	color: #2abbaf;
+	color: #2abbaf !important;
 }
 
 .card.card-body.avatar-canvas{
@@ -130,7 +130,7 @@
 	/*color: #30D5C7 !important;*/
 }
 .tab-container .nav li a{
-	color: #8c949c !important;
+	color: #414447 !important;
 	font-weight: 600;
 	background:  ;
 	margin:0 20px;
@@ -451,21 +451,6 @@
 }
 
 
-
-/* ----------------Layout for Right component (notice-board)----------- */
-.right-component {
-    /*background: pink;*/
-    min-width: 200px;
-    position: relative;
-    height: 100vh;
-    max-height: 100vh;
-    padding: 0px !important;
-    border-left: 1px solid #bdbfc2;
-/*   -webkit-box-shadow: -3px 1px 10px -2px rgba(187,189,189,1);
--moz-box-shadow: -3px 1px 10px -2px rgba(187,189,189,1);
-box-shadow: -3px 1px 10px -2px rgba(187,189,189,1);*/
-
-}
 
 
 
