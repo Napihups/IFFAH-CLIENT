@@ -1,0 +1,127 @@
+#leaf-house{
+	background:;
+	height: 100vh;
+	overflow-y: auto;
+}
+
+#leaf-house .margin-cont{
+	background: ;
+	margin-top: 100px;
+	/*text-align: center;*/
+}
+
+#leaf-house .card-body {
+	width: 100%;
+	text-align: center;
+	margin: 0px auto;
+	height: auto;
+	/*background: #30D5C7;*/
+	border: none;
+	box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+}
+
+#leaf-house .card-body h1{
+	font-size: 20px;
+	font-weight: bold;
+	padding-bottom: 10px;
+	border-bottom: 1px solid #8c949c;
+
+}
+
+#leaf-house .data-container{
+	width: 100%;
+	background: ;
+	padding: 10px 0px;
+	font-size: 16px;
+}
+
+.btn-panel-central{
+	width: 100%;
+	padding: 0px 10px;
+	margin-bottom: 10px !important;
+	background:;
+}
+
+.btn-panel-central .btn{
+	padding-left: 20px !important;
+	padding-right: 20px !important;
+}
+
+.data-container input {
+	width: 60%;
+	height: 40px;
+	background: transparent;
+	border-radius: 0px;
+	border: none;
+	border-bottom: 2px solid #30D5C7;
+	font-size: 20px;
+}
+
+.data-container .btn{
+	height: 35px;
+	width: 35px;
+	padding: 0px;
+	background: transparent;
+	color: #30D5C7;
+	border:1px solid #30D5C7 ;
+	transition: 0.1s;
+}
+
+.data-container .btn:hover{
+	background: #2abbaf !important;
+	border:none;
+	color:white;
+	box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24) !important;
+}
+
+
+
+
+.central-ticket .date{
+	padding: 5px;
+	padding-left: 20px;
+	padding-right: 20px;
+	border-radius: 5px;
+	border: 1px solid #dadada;
+}
+
+.btn-panel-redleaf{
+	width: 100%;
+	padding: 0px 10px;
+	padding-top: 10px;
+	margin-top: 30px;
+	margin-bottom: 20px;
+	border-top: 1px solid #dadada;
+}
+
+.btn-panel-redleaf .btn {
+	padding-left: 30px;
+	padding-right: 30px;
+	padding-top: 0px;
+	padding-bottom: 0px;
+	color: #C4183C !important;
+	font-size: 20px;
+}
+
+.red-leaf-card{
+	margin: 10px 0px !important;
+	padding: 10px !important;
+	/*border-radius: 0px;*/
+	background:;
+}
+
+.red-leaf-card h1{
+	/*padding: 0px !important;*/
+	padding-top: 0px;
+	background: ;
+}
+
+.red-leaf-icon{
+	font-size: 20px !important;
+	color: #C4183C !important;
+	padding: 0px !important;
+	margin:0px !important;
+}
+
+
+

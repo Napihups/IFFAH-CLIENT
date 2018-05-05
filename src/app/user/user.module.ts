@@ -6,6 +6,7 @@ import { UserMainComponent } from './components/user-main/user-main.component';
 import { UserModuleRouting } from './user-module.routing';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { NoticeBoardComponent } from './components/notice-board/notice-board.component';
+import { LeafHouseComponent } from './components/leaf-house/leaf-house.component';
 
 @NgModule({
   imports: [
@@ -15,7 +16,9 @@ import { NoticeBoardComponent } from './components/notice-board/notice-board.com
   declarations: [
   	ProfileComponent, 
   	RepositoryComponent, 
-  	UserMainComponent, NavbarComponent, NoticeBoardComponent
+  	UserMainComponent, 
+  	NavbarComponent, 
+  	NoticeBoardComponent, LeafHouseComponent
   ]
 })
 export class UserModule { }

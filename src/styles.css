@@ -3,6 +3,7 @@
 /*@import url('https://fonts.googleapis.com/css?family=IBM+Plex+Sans:100i');*/
 @import url('https://fonts.googleapis.com/css?family=IBM+Plex+Sans:700i');
 @import url('https://fonts.googleapis.com/css?family=Fredoka+One|Poppins:500');
+@import url('https://fonts.googleapis.com/css?family=Pacifico');
 
 #body{
     background: #e9ebee;
@@ -13,6 +14,10 @@
     font-weight: lighter;
     /*max-width: 1800px;*/
     padding: 0px 0px;
+}
+
+.digit{
+    font-family: 'Pacifico', cursive !important;
 }
 
 .bg-success{
@@ -55,6 +60,28 @@
 .bg-purple{
     background: #502f96 !important;
 }
+
+.bg-red{
+    background: #ff0000 !important;
+}
+
+
+.bg-green{
+    background: #1e801a !important;
+}
+
+.bg-grey{
+    background: #545e68 !important;
+}
+
+.c-white{
+    color:white !important;
+}
+
+.c-black{
+    color:#eeeeee !important;
+}
+
 
 @media only screen and (min-width:1400px) {
     .app-wrapper {

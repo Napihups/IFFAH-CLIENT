@@ -3,6 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { UserMainComponent } from './components/user-main/user-main.component';
 import { ProfileComponent } from './components/profile/profile.component';
 import { RepositoryComponent }from './components/repository/repository.component';
+import { LeafHouseComponent } from './components/leaf-house/leaf-house.component';
 
 
 const route :Routes = [
@@ -13,7 +14,7 @@ const route :Routes = [
 		children: [
 
 			{
-				path:'', component: RepositoryComponent
+				path:'', redirectTo: 'leaf-house', pathMatch: 'full'
 			},
 			{
 				path:'profile', component: ProfileComponent
@@ -21,9 +22,9 @@ const route :Routes = [
 			{
 				path:'repository', component: RepositoryComponent
 			},
-			// {
-			// 	path: 'liabilities', component: LiabilitiesComponent
-			// }
+			{
+				path: 'leaf-house', component: LeafHouseComponent
+			}
 		]
 	}
 ]
