@@ -10,6 +10,23 @@
 	/*text-align: center;*/
 }
 
+.head-lf{
+	margin:10px; 
+	border-bottom: 2px solid #30D5C7;
+	padding-bottom: 10px;
+}
+.head-lf h1{
+	font-size: 15px;
+	font-weight: bold;
+}
+
+.head-lf span{
+	font-size: 15px;
+	padding-right: 30px;
+	/*font-weight: bold;*/
+
+}
+
 #leaf-house .card-body {
 	width: 100%;
 	text-align: center;
@@ -35,17 +52,7 @@
 	font-size: 16px;
 }
 
-.btn-panel-central{
-	width: 100%;
-	padding: 0px 10px;
-	margin-bottom: 10px !important;
-	background:;
-}
 
-.btn-panel-central .btn{
-	padding-left: 20px !important;
-	padding-right: 20px !important;
-}
 
 .data-container input {
 	width: 60%;
@@ -77,6 +84,8 @@
 
 
 
+
+
 .central-ticket .date{
 	padding: 5px;
 	padding-left: 20px;
@@ -99,7 +108,7 @@
 	padding-right: 30px;
 	padding-top: 0px;
 	padding-bottom: 0px;
-	color: #C4183C !important;
+	/*color: #C4183C !important;*/
 	font-size: 20px;
 }
 
