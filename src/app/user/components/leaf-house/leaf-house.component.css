@@ -27,6 +27,40 @@
 
 }
 
+
+
+.paycheck-card {
+	background: !important;
+	/*border: 1px solid black !important;*/
+	box-shadow: none !important;
+	/*background: blue !important;*/
+	text-align: center !important;
+
+}
+
+.paycheck-form{
+	background: ;
+	/*position: absolute;*/
+	width: 70%;
+	height: 0px;
+	margin: 10px auto;
+	/*display: none;*/
+	overflow: hidden;
+	transition: height 0.5s;
+}
+.paycheck-form-display{
+	height: 200px !important;
+	border-bottom: 1px solid #dadada;
+}
+
+/*.paycheck-form-hidden:hover{
+	height: 200px;
+}*/
+
+.amount-input{
+	border-left:none !important;
+}
+
 #leaf-house .card-body {
 	width: 100%;
 	text-align: center;

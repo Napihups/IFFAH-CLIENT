@@ -16,6 +16,75 @@
 						<h1 class="d-inline">Check in :</h1>
 						<span class="d-inline"> Every <strong>3rd</strong> of the month</span>
 					</div>
+
+					<div class="paycheck-card card-body">
+
+						<button *ngIf="!paycheckFormDisplay" (click)="paycheckFormClick()" id="btn-addpaycheck" class="btn btn-sm bg-primary c-white pl-5 pr-5 pt-2 pb-2">
+						Add Paycheck <i class="fas fa-dollar-sign"></i>
+						</button>
+						<button *ngIf="paycheckFormDisplay" (click)="paycheckFormClick()" id="btn-addpaycheck" class="btn btn-sm bg-grey c-white bg-grey-hover">
+						Cancel
+						</button>
+						<button *ngIf="paycheckFormDisplay" (click)="paycheckFormClick()" id="btn-addpaycheck" class="btn btn-sm bg-primary c-white">
+						Deposit <i class="fas fa-angle-double-down"></i>
+						</button>
+
+
+						<div #paycheckForm class="paycheck-form">
+							<form class="form text-left">
+								<div class="row" style="background:">
+									<div class="col-md-4">
+										<label class="my-1 mr-2 mb-2" for="">Amount</label>
+										 <div class="input-group mb-2">
+										 	
+									        <div class="input-group-prepend">
+									          <div class="input-group-text bg-primary c-white">
+									          	<i class="fas fa-dollar-sign"></i> 
+									          </div>
+									        </div>
+									        <input type="number" class="form-control amount-input" 
+									        placeholder="00.00">
+
+									      </div>	
+									</div>
+									<div class="col-md-4" style="background:">
+										 <label class="my-1 mr-2" for="inlineFormCustomSelectPref">Income Source</label>
+										  <select class="custom-select my-1 mr-sm-2" id="inlineFormCustomSelectPref">
+										    <option selected>Choose employer</option>
+										    <option value="1">Cognizant Solutions</option>
+										    <option value="2">Two</option>
+										    <option value="3">Three</option>
+										  </select>
+									</div>
+									<div class="col-md-4" style="background:">
+										 <label class="my-1 mr-2" for="inlineFormCustomSelectPref">
+										 Month of paycheck</label>
+										  <select class="custom-select my-1 mr-sm-2" id="inlineFormCustomSelectPref">
+										    <option selected>Jan</option>
+										    <option value="1">Feb</option>
+										    <option value="2">March</option>
+										    <option value="3">April</option>
+										    <option value="3">May</option>
+										    <option value="3">June</option>
+										    <option value="3">July</option>
+										  </select>
+									</div>
+								</div>
+								<div class="row mt-2">
+									<div class="col-md-12" style="background:">
+										<label class="my-1 mr-2" for="remark">Remark 
+											<span class="text-muted font-italic">if any</span>
+										</label>
+										<textarea class="form-control" rows="2"></textarea>
+									</div>
+								</div>
+								
+							</form>
+						</div>
+					</div>
+
+					
+
 					<div class='card card-body central-ticket'>
 						<h1><i class="fas fa-leaf "></i> Pay - check
 							
@@ -53,11 +122,13 @@
 						<div class="row">
 							<div class="col-md-12 text-right">
 								<div class="">
+									<!-- <button class="btn btn-sm bg-green c-white bg-green-hover">Add Paycheck
+									 <i class="fas fa-dollar-sign"></i></button>
 									<button class="btn btn-sm bg-green c-white">Disburse
 									 <i class="fas fa-dollar-sign"></i></button>
 									<button class="btn btn-sm bg-danger c-white">Reset <i class="fas fa-circle-notch"></i></button>
 									<button class="btn-setup btn btn-sm bg-grey c-white">Setup <i class="fas fa-sliders-h"></i></button>
-									<button class="btn-setup btn btn-sm bg-grey c-white"> <i class="fas fa-history"></i></button>
+									<button class="btn-setup btn btn-sm bg-grey c-white"> <i class="fas fa-history"></i></button> -->
 								</div>
 							</div>
 						</div>
