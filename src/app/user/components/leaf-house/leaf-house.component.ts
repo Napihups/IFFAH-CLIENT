@@ -10,10 +10,14 @@ export class LeafHouseComponent implements OnInit, AfterViewInit {
 
 	//------- DOM ---------------------------//
 	@ViewChild('paycheckForm') paycheckForm
+	@ViewChild('amountInput') amountInput;
+	@ViewChild('pcForm') pcForm;
+
 	//---------------------------------------//
 
 	//------------ DOM STATE -----------------
 	paycheckFormDisplay:boolean = false;
+	showMsgONE:boolean = false
 	//---------------------------------------//
 
   constructor() { }
@@ -25,6 +29,7 @@ export class LeafHouseComponent implements OnInit, AfterViewInit {
   	if(!this.paycheckFormDisplay){
   		this.paycheckForm.nativeElement.className = 'paycheck-form' ;
   	}
+  	this.pcForm.nativeElement.reset();
   }
 
 
@@ -38,6 +43,23 @@ export class LeafHouseComponent implements OnInit, AfterViewInit {
   		this.paycheckForm.nativeElement.className = 'paycheck-form paycheck-form-display' ;
   	}
   }
+
+  doCancelPayCheckForm(){
+  	this.paycheckFormDisplay = false;
+  	this.paycheckForm.nativeElement.className = 'paycheck-form';
+  	this.pcForm.nativeElement.reset();
+  }
+
+  doDeposit(){
+  	this.paycheckFormDisplay = false;
+  	this.paycheckForm.nativeElement.className = 'paycheck-form';
+  	this.pcForm.nativeElement.reset();
+  	this.showMsgONE = true;
+  }
+
+
+  //----------------- UTILS -----------------------------------//
+
 
 
 

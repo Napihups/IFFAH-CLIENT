@@ -19,19 +19,17 @@
 
 					<div class="paycheck-card card-body">
 
-						<button *ngIf="!paycheckFormDisplay" (click)="paycheckFormClick()" id="btn-addpaycheck" class="btn btn-sm bg-primary c-white pl-5 pr-5 pt-2 pb-2">
-						Add Paycheck <i class="fas fa-dollar-sign"></i>
-						</button>
-						<button *ngIf="paycheckFormDisplay" (click)="paycheckFormClick()" id="btn-addpaycheck" class="btn btn-sm bg-grey c-white bg-grey-hover">
-						Cancel
-						</button>
-						<button *ngIf="paycheckFormDisplay" (click)="paycheckFormClick()" id="btn-addpaycheck" class="btn btn-sm bg-primary c-white">
-						Deposit <i class="fas fa-angle-double-down"></i>
-						</button>
+					
 
-
+						<div *ngIf="showMsgONE" class="alert bg-success alert-dismissible fade show" role="alert">
+  <strong style="font-weight: bold">Deposit sucessful !</strong> You should start disburse and track down your cashflow for this paycheck
+  <button (click)="showMsgONE = false" type="button" class="close" data-dismiss="alert" aria-label="Close">
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div>
 						<div #paycheckForm class="paycheck-form">
-							<form class="form text-left">
+							<h1 class="">New Pay-Check</h1>
+							<form #pcForm class="form text-left">
 								<div class="row" style="background:">
 									<div class="col-md-4">
 										<label class="my-1 mr-2 mb-2" for="">Amount</label>
@@ -48,7 +46,9 @@
 									      </div>	
 									</div>
 									<div class="col-md-4" style="background:">
-										 <label class="my-1 mr-2" for="inlineFormCustomSelectPref">Income Source</label>
+										 <label class="my-1 mr-2" for="inlineFormCustomSelectPref">
+										 Income Source
+										</label>
 										  <select class="custom-select my-1 mr-sm-2" id="inlineFormCustomSelectPref">
 										    <option selected>Choose employer</option>
 										    <option value="1">Cognizant Solutions</option>
@@ -57,17 +57,14 @@
 										  </select>
 									</div>
 									<div class="col-md-4" style="background:">
-										 <label class="my-1 mr-2" for="inlineFormCustomSelectPref">
-										 Month of paycheck</label>
-										  <select class="custom-select my-1 mr-sm-2" id="inlineFormCustomSelectPref">
-										    <option selected>Jan</option>
-										    <option value="1">Feb</option>
-										    <option value="2">March</option>
-										    <option value="3">April</option>
-										    <option value="3">May</option>
-										    <option value="3">June</option>
-										    <option value="3">July</option>
-										  </select>
+										 <label class="my-1 mr-2 mb-2" for="inlineFormCustomSelectPref">
+										 Month of paycheck
+
+										</label>
+										 <div class="input-group mb-2">
+										  <input class="form-control" disabled placeholder="May 2018">
+										  <span class="text-muted font-italic">Deposit paycheck is only for the current month </span>
+										</div>
 									</div>
 								</div>
 								<div class="row mt-2">
@@ -78,15 +75,24 @@
 										<textarea class="form-control" rows="2"></textarea>
 									</div>
 								</div>
-								
 							</form>
 						</div>
+
+						<button *ngIf="!paycheckFormDisplay" (click)="paycheckFormClick()" id="btn-addpaycheck" class="btn btn-sm bg-main bg-primary-hover c-white pl-5 pr-5 pt-2 pb-2">
+						Add Paycheck <i class="fas fa-dollar-sign"></i>
+						</button>
+						<button *ngIf="paycheckFormDisplay" (click)="doCancelPayCheckForm()" id="btn-addpaycheck" class="btn btn-sm bg-grey c-white ">
+						Cancel
+						</button>
+						<button *ngIf="paycheckFormDisplay" (click)="doDeposit()" id="btn-addpaycheck" class="btn btn-sm bg-main bg-primary-hover c-white">
+						Deposit <i class="fas fa-angle-double-down"></i>
+						</button>
 					</div>
 
 					
 
 					<div class='card card-body central-ticket'>
-						<h1><i class="fas fa-leaf "></i> Pay - check
+						<h1><i class="fas fa-leaf "></i> Central
 							
 						</h1>
 						<div class="row text-left">
@@ -121,10 +127,13 @@
 						</div>
 						<div class="row">
 							<div class="col-md-12 text-right">
-								<div class="">
-									<!-- <button class="btn btn-sm bg-green c-white bg-green-hover">Add Paycheck
-									 <i class="fas fa-dollar-sign"></i></button>
-									<button class="btn btn-sm bg-green c-white">Disburse
+								<div class="central-card-btn-panel">
+									<button class="btn btn-sm bg-grey c-white bg-green-hover"
+									data-toggle="modal" data-target="#viewPayChecksModal">
+										View PayCheck Added &nbsp;
+									 <i class="fas fa-clipboard-list"></i>
+									</button>
+									<!-- <button class="btn btn-sm bg-green c-white">Disburse
 									 <i class="fas fa-dollar-sign"></i></button>
 									<button class="btn btn-sm bg-danger c-white">Reset <i class="fas fa-circle-notch"></i></button>
 									<button class="btn-setup btn btn-sm bg-grey c-white">Setup <i class="fas fa-sliders-h"></i></button>
@@ -170,6 +179,34 @@
 
 						
 					</div>
+					<div class="row">
+						<div class="col-md-4">
+							<div class="red-leaf-card card card-body">
+								<i class="fas fa-leaf red-leaf-icon"></i>
+								<h1>HDB - Home</h1>
+
+							
+							</div>
+						</div>
+						<div class="col-md-4">
+							<div class="red-leaf-card card card-body">
+								<i class="fas fa-leaf red-leaf-icon"></i>
+								<h1>HDB - Home</h1>
+
+							
+							</div>
+						</div>
+						<div class="col-md-4">
+							<div class="red-leaf-card card card-body">
+								<i class="fas fa-leaf red-leaf-icon"></i>
+								<h1>HDB - Home</h1>
+
+							
+							</div>
+						</div>
+
+						
+					</div>
 
 
 
@@ -186,6 +223,40 @@
 			<notice-board></notice-board>
 		</div>
 		
+	</div>
+</div>
+
+
+<!--------------------------- MODALS TEMPLATES ------------------------------------>
+<div class="modal fade" id ="viewPayChecksModal">
+	<div class="modal-dialog modal-lg" role="document">
+		<div class="modal-content">   
+		  <div class="modal-body text-center custom">
+		   	
+		   	<ul class="list-group">
+		   		<li class="list-group-item text-left">
+		   			<div class="row" style="background:">
+		   				<p class="pc-date">Deposited on : <span>16/05/2018 &nbsp; 5:37 PM</span></p>
+		   			</div>
+		   			<div class="paycheck-item">
+		   				<h5 class="d-inline"> <span class="font-weight-bold c-dark">Amount :</span> $3152.00</h5>
+		   				
+						<h5 class="d-inline"> <span class="font-weight-bold c-dark">Source :</span> Cognizant Solutions</h5>
+		   			</div>
+		   			<div class="remark">
+		   				<label>Remark</label>
+		   				<p> vdiohve level leacbea feape fae;f aefae
+		   				dveov eale aecaedirfkdirlifjef ef
+		   			dvsif eqflef efi</p>
+		   			</div>
+		   		</li>
+		   		<li class="list-group-item">Hello</li>
+		   		<li class="list-group-item">Hello</li>
+		   	</ul>
+		   
+		    <button type="button" class="btn btn-sm btn-secondary" data-dismiss="modal">Cancel</button>
+		  </div>
+		</div>
 	</div>
 </div>
 

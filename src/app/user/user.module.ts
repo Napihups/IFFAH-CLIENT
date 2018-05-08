@@ -8,6 +8,7 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 import { NoticeBoardComponent } from './components/notice-board/notice-board.component';
 import { LeafHouseComponent } from './components/leaf-house/leaf-house.component';
 
+
 @NgModule({
   imports: [
     CommonModule,
@@ -18,7 +19,8 @@ import { LeafHouseComponent } from './components/leaf-house/leaf-house.component
   	RepositoryComponent, 
   	UserMainComponent, 
   	NavbarComponent, 
-  	NoticeBoardComponent, LeafHouseComponent
+  	NoticeBoardComponent, 
+    LeafHouseComponent
   ]
 })
 export class UserModule { }
