@@ -9,6 +9,11 @@ import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
 import { appRoute } from './app.routing';
 
+//----------- SERVICES WITHIN THIS APP MODULE ------/
+import { AuthenticationService } from './services/authentication.service';
+import { FormValidationService } from './services/form-validation.service';
+import { PassportService } from './services/passport.service';
+
 //----------APP MODULES -----------------------------//
 import { UserModule } from './user/user.module';
 
@@ -28,7 +33,11 @@ import { UserModule } from './user/user.module';
     appRoute,
     UserModule
   ],
-  providers: [],
+  providers: [ 
+    AuthenticationService,
+    FormValidationService,
+    PassportService 
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
