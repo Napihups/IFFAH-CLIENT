@@ -13,7 +13,9 @@ export class PassportService {
 
 	constructor(
 		private http: Http
-	){}
+	){
+		console.log("Passport service is Initialized");
+	}
 
 
 
@@ -35,13 +37,13 @@ export class PassportService {
 
 	loadTokenData() {
 		this.token = localStorage.getItem('t_id');
-    	this.account = JSON.parse(localStorage.getItem('account'));
+    	this.account = JSON.parse(localStorage.getItem('accSession'));
 	}
 
 	isAuthenticated(): boolean {
 
 	    let t = localStorage.getItem('t_id');
-	    let u = localStorage.getItem('account');
+	    let u = localStorage.getItem('accSession');
 	    if(t != null && u != null){
 	      return true;
 	    }else {
@@ -56,6 +58,12 @@ export class PassportService {
 	    } else {
 	      return null;
 	    }
+	}
+
+	clearSessionData(){
+		this.token = null;
+		this.account = null;
+		localStorage.clear();
 	}
 
 /** IN CONSIDERATION -------------------------*/

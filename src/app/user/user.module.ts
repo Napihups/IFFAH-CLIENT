@@ -7,6 +7,7 @@ import { UserModuleRouting } from './user-module.routing';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { NoticeBoardComponent } from './components/notice-board/notice-board.component';
 import { LeafHouseComponent } from './components/leaf-house/leaf-house.component';
+import { PassportService } from '../services/passport.service';
 
 
 @NgModule({
@@ -21,6 +22,9 @@ import { LeafHouseComponent } from './components/leaf-house/leaf-house.component
   	NavbarComponent, 
   	NoticeBoardComponent, 
     LeafHouseComponent
+  ],
+  providers: [
+      PassportService
   ]
 })
 export class UserModule { }

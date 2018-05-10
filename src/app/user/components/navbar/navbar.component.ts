@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { PassportService } from '../../../services/passport.service';
 
 @Component({
   selector: 'navbar',
@@ -8,12 +9,17 @@ import { Router } from '@angular/router';
 })
 export class NavbarComponent implements OnInit {
 
-  constructor(private Router: Router) { }
+  constructor(
+  		private Router: Router,
+  		private PassportService : PassportService
+  ) { }
 
   ngOnInit() {
+
   }
 
   doLogout(){
+  	this.PassportService.clearSessionData();
   	this.Router.navigate(['/login']);
   }
 

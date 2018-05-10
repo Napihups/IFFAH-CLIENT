@@ -4,12 +4,15 @@ import { UserMainComponent } from './components/user-main/user-main.component';
 import { ProfileComponent } from './components/profile/profile.component';
 import { RepositoryComponent }from './components/repository/repository.component';
 import { LeafHouseComponent } from './components/leaf-house/leaf-house.component';
+import { AuthGuard } from '../services/auth-guard.service';
 
 
 const route :Routes = [
 
 	{
 		path: 'user', component: UserMainComponent,
+		
+			canActivate: [AuthGuard],
 
 		children: [
 

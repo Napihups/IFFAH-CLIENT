@@ -13,6 +13,7 @@ import { appRoute } from './app.routing';
 import { AuthenticationService } from './services/authentication.service';
 import { FormValidationService } from './services/form-validation.service';
 import { PassportService } from './services/passport.service';
+import { AuthGuard } from './services/auth-guard.service';
 
 //----------APP MODULES -----------------------------//
 import { UserModule } from './user/user.module';
@@ -36,7 +37,8 @@ import { UserModule } from './user/user.module';
   providers: [ 
     AuthenticationService,
     FormValidationService,
-    PassportService 
+    PassportService,
+    AuthGuard
   ],
   bootstrap: [AppComponent]
 })
