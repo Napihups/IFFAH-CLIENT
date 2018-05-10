@@ -18,16 +18,16 @@
    			</div>
    			<div class="checkbox show" (click)="toggleCheckBox()">
 
-                <span id = "checkb" class="character-checkbox">
-                  <div *ngIf="isChecked">
-                     <i class="tick fas fa-check"></i>
-                  </div>
-                </span>
-                <span class="label">Remember me</span>
-            </div>
+            <span id = "checkb" class="character-checkbox">
+              <div *ngIf="isChecked">
+                 <i class="tick fas fa-check"></i>
+              </div>
+            </span>
+            <span class="label">Remember me</span>
+        </div>
 
+            <span *ngIf="hasError" class="error"> {{errorMsg}} ! </span>
             <div class="form-group">
-              <!-- [routerLink]="['/user']" -->
             	<a (click)="doUserLogin()" class="btn btn-md btn-login">Sign in</a>
             </div>
 

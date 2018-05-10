@@ -58,7 +58,7 @@ input .form-control:hover{
 .checkbox {
     text-align: left;
     float: left;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
     position: relative;
     -webkit-user-select: none;
     -moz-user-select: none;
@@ -66,6 +66,7 @@ input .form-control:hover{
     -o-user-select: none;
     user-select: none;
     width: 100%;
+    background: ;
 }
 .checkbox.show:before {
     color: #30D5C7;
@@ -115,4 +116,12 @@ a.btn-login:hover{
 
 .forgot a{
     color: #30D5C7 !important;
+}
+
+.error{
+    color: red;
+    padding: 0px;
+    margin: 0px;
+    background:;
+    font-style: italic;
 }
