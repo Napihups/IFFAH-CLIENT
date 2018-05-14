@@ -8,6 +8,8 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 import { NoticeBoardComponent } from './components/notice-board/notice-board.component';
 import { LeafHouseComponent } from './components/leaf-house/leaf-house.component';
 import { PassportService } from '../services/passport.service';
+import { FinanceComponent } from './components/finance/finance.component';
+import { FSetupComponent } from './components/f-setup/f-setup.component';
 
 
 @NgModule({
@@ -21,7 +23,7 @@ import { PassportService } from '../services/passport.service';
   	UserMainComponent, 
   	NavbarComponent, 
   	NoticeBoardComponent, 
-    LeafHouseComponent
+    LeafHouseComponent, FinanceComponent, FSetupComponent
   ],
   providers: [
       PassportService

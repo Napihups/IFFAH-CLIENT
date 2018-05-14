@@ -1,0 +1,43 @@
+#finance{
+	background:;
+	height: 100vh;
+	overflow-y: auto;
+}
+
+#finance .margin-cont{
+	background:;
+	margin-top: 100px;
+	/*text-align: center;*/
+}
+
+#finance .card-body {
+	width: 60%;
+	margin: 0px auto;
+}
+
+#finance .card-body h1 {
+	font-size: 20px;
+
+}
+
+#finance .card-body .btn {
+	width: 30%;
+	margin: 0px auto;
+	/*font-weight: bold;*/
+}
+
+
+/*#cf-header {
+	background: ;
+}
+.main-clock{
+	font-size: 20px;
+}
+
+.main-clock span{
+	background: white;
+	padding: 10px;
+	border-radius: 3px;
+	color: #30D5C7;
+	font-size: 25px;
+}*/

@@ -46,13 +46,10 @@
     /*height: 30px;*/
 }
 
-input .form-control:focus{
-    border: none !important;
+.login .form-control:focus{
+    box-shadow: 0 0 5px #30D5C7 !important;
 }
 
-input .form-control:hover{
-    border: none !important;
-}
 
 
 .checkbox {

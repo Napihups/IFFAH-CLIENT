@@ -9,14 +9,20 @@ import { PassportService } from '../../../services/passport.service';
 })
 export class NavbarComponent implements OnInit {
 
+  /** ---------- states variables ------------------*/
+  account_holder: string = " ";
+  /** ----------------------------------------------*/
+
   constructor(
   		private Router: Router,
   		private PassportService : PassportService
   ) { }
 
   ngOnInit() {
-
+    this.account_holder = this.PassportService.getUserSession().username;
+    console.log(this.account_holder);
   }
+
 
   doLogout(){
   	this.PassportService.clearSessionData();
