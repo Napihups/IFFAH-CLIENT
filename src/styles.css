@@ -85,6 +85,12 @@
     border: none;
 }
 
+.bg-white{
+    background: white !important;
+    border: 1px solid #dadada !important;
+    /*color: #dadada !important;*/
+}
+
 .c-white{
     color:white !important;
 }

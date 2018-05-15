@@ -10,29 +10,25 @@
 					<form class="form-fsetup">
 						<h1 class="d-in">Finance Setup</h1>
 						<div class="form-body">
-							<div class="form-group border-btm">
+							<div class="form-group" style="background:">
 								<label>Choose Account type <br> <span class="text-muted form-helper-text">Finance will commence based on either weekly, monthly or annually .</span> </label>
-								<div class="form-check">
-								  <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
-								  <label class="form-check-label" for="exampleRadios1">
-								    Weekly 
-								  </label>
+								<div class="select-btn-panel text-center">
 
-								</div>
-								<div class="form-check">
-								  <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
-								  <label class="form-check-label" for="exampleRadios2">
-								    Monthly
-								  </label>
-								</div>
-								<div class="form-check">
-								  <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios3" value="option2">
-								  <label class="form-check-label" for="exampleRadios3">
-								    Annually
-								  </label>
+									<div class="btn-gp-select">
+										<div #sBtnW (click)="selectBtnClick('W')" class="btn btn-sm bg-white btn-option">
+											<p>Weekly</p><span>Financing based on day of week </span>
+										</div>
+										<div #sBtnM (click)="selectBtnClick('M')" class="btn btn-sm bg-white btn-option">
+											<p>Monthly</p><span>Financing based on day of month</span>
+										</div>
+										<div #sBtnY (click)="selectBtnClick('Y')" class="btn btn-sm bg-white btn-option">
+											<p>Year</p><span>Financing based on date of year </span>
+										</div>
+									</div>
+									
 								</div>
 							</div>
-							<div class="form-group border-btm">
+							<div class="form-group ">
 								<div class="row">
 									<div class="col-md-6">
 										<label>Base Renumeration value</label>
@@ -51,7 +47,7 @@
 
 
 
-							<div *ngIf="typeSelected === 'weekly'" class="form-group setup border-btm" style="margin-top: 40px">
+							<div *ngIf="typeSelected === 'W'" class="form-group setup " style="margin-top: 40px">
 							
 									<label>Pick Day of week</label>
 									<select class="form-control ">
@@ -62,7 +58,7 @@
 								
 							</div>
 
-							<div *ngIf="typeSelected === 'monthly'" class="form-group setup border-btm" style="margin-top: 40px">
+							<div *ngIf="typeSelected === 'M'" class="form-group setup" style="margin-top: 40px">
 							
 									<label>Pick Day of Month</label>
 									<select class="form-control ">
@@ -72,7 +68,7 @@
 									</select>
 								
 							</div>
-							<div *ngIf="typeSelected === 'yearly'" class="form-group setup border-btm" style="margin-top: 40px">
+							<div *ngIf="typeSelected === 'Y'" class="form-group setup " style="margin-top: 40px">
 								<label>Pick Date of year</label>
 								<div class="row" style="background:">
 									
@@ -100,13 +96,10 @@
 							</div>
 							<div class="form-note">
 								<h4>Please take note !</h4>
-								<p class="text-muted ">This setup must vel ecace ckaebc eac;eabcaec eacae
-								acleaouc eackh eac eackaecehudvwv
-								dv,daciec lecbeq ealneqif q
-								aeqkeieq qebq 3f3qe.. Thank you</p>
+								<p class="text-muted ">Ensure that you have selected the correct type for your finance account, once confirm you cannot change but you can still edit your Renum value</p>
 							</div>
 
-							<div class="btn-gp">
+							<div class="btn-gp text-right">
 								<button class="btn btn-sm bg-main c-white">Confirm</button>
 								<button class="btn btn-sm btn-transparent">Cancel</button>
 							</div>

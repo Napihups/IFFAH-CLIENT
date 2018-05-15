@@ -1,3 +1,5 @@
+
+
 #f-setup{
 	background:;
 	height: 100vh;
@@ -28,7 +30,7 @@
 
 .form-fsetup{
 	background: white;
-	width: 65%;
+	width: 80%;
 	margin: 0px auto;
 	margin-bottom: 50px;
 	border-radius: 5px;
@@ -44,6 +46,11 @@
 
 .form-fsetup .form-helper-text{
 	font-style: italic;
+}
+
+.form-fsetup .select-btn-panel{
+	margin-bottom: 40px;
+	background:;
 }
 
 .form-fsetup .form-control{
@@ -86,3 +93,38 @@
 	font-weight: bold;
 	font-style: italic;
 }
+
+.form-fsetup .btn-option {
+	/*width: 100%;*/
+	text-align: center;
+	margin:10px;
+}
+
+.form-fsetup .btn-option:hover {
+	border: 1px solid #30D5C7 !important;
+	box-shadow: 0 0 5px #30D5C7 !important;
+	transition: 0.1s;
+}
+
+.btn-selected {
+	border: 1px solid #30D5C7 !important;
+	box-shadow: 0 0 5px #30D5C7 !important;
+	transition: 0.1s;
+}
+
+
+
+.form-fsetup .btn-option p {
+	font-size: 15px;
+	padding-bottom: 0px;
+	margin-bottom: 0px;
+	overflow-wrap: break-word !important;
+}
+.form-fsetup .btn-option span{
+	font-size: 13px;
+	color: #545e68;
+	margin-top: 0px;
+	padding-top: 0px;
+	overflow-wrap: break-word !important;
+}
+
