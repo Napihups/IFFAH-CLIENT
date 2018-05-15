@@ -20,7 +20,6 @@ export class NavbarComponent implements OnInit {
 
   ngOnInit() {
     this.account_holder = this.PassportService.getUserSession().username;
-    console.log(this.account_holder);
   }
 
 

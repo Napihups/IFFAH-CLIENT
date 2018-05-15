@@ -32,11 +32,12 @@
 								<div class="row">
 									<div class="col-md-6">
 										<label>Base Renumeration value</label>
-										<input class="form-control" type="number">
+										<input #renumInput [(ngModel)]="renumAmount" name="renumAmount" class="form-control" type="number">
 									</div>
 									<div class="col-md-6">
 										<label>Base Currency </label>
-										<select class="form-control">
+										<select #baseCInput 
+										[(ngModel)]="baseCurrency" name="basedCurrency" class="form-control">
 											<option>USD</option>
 											<option>SGD</option>
 											<option>RM</option>
@@ -50,7 +51,7 @@
 							<div *ngIf="typeSelected === 'W'" class="form-group setup " style="margin-top: 40px">
 							
 									<label>Pick Day of week</label>
-									<select class="form-control ">
+									<select #dowInput [(ngModel)]="dow" name="dow" class="form-control ">
 										<option>Saturday</option>
 										<option>Sunday</option>
 										<option>Monday</option>
@@ -61,7 +62,7 @@
 							<div *ngIf="typeSelected === 'M'" class="form-group setup" style="margin-top: 40px">
 							
 									<label>Pick Day of Month</label>
-									<select class="form-control ">
+									<select #domInput [(ngModel)]="dom" name="dom" class="form-control ">
 										<option>01</option>
 										<option>02</option>
 										<option>03</option>
@@ -75,7 +76,8 @@
 									<div class="col-md-6">
 										<div class="form-group">
 											<span class="text-muted">Select Month</span>
-											<select class="form-control">
+											<select #doyMonthInput 
+											[(ngModel)]="doy_month" name="doy_month" class="form-control">
 												<option>Jan</option>
 												<option>Feb</option>
 												<option>March</option>
@@ -85,7 +87,7 @@
 									<div class="col-md-6">
 										<div class="form-group">
 											<span class="text-muted">Select Day</span>
-											<select class="form-control">
+											<select #doyDayInput [(ngModel)]="doy_day" name="doy_day" class="form-control">
 												<option>01</option>
 												<option>02</option>
 												<option>03</option>
@@ -97,11 +99,12 @@
 							<div class="form-note">
 								<h4>Please take note !</h4>
 								<p class="text-muted ">Ensure that you have selected the correct type for your finance account, once confirm you cannot change but you can still edit your Renum value</p>
+								<p class="errorForm-text" *ngIf="formError != ''">{{formError}}</p>
 							</div>
 
 							<div class="btn-gp text-right">
-								<button class="btn btn-sm bg-main c-white">Confirm</button>
-								<button class="btn btn-sm btn-transparent">Cancel</button>
+								<div (click)="doSubmitFinanceSetup()" class="btn btn-sm bg-main c-white">Confirm</div>
+								<div [routerLink]="['/user/finance']" class="btn btn-sm btn-transparent">Cancel</div>
 							</div>
 
 						</div>

@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms';
 import { ProfileComponent } from './components/profile/profile.component';
 import { RepositoryComponent } from './components/repository/repository.component';
 import { UserMainComponent } from './components/user-main/user-main.component';
@@ -15,7 +16,8 @@ import { FSetupComponent } from './components/f-setup/f-setup.component';
 @NgModule({
   imports: [
     CommonModule,
-    UserModuleRouting
+    UserModuleRouting,
+    FormsModule
   ],
   declarations: [
   	ProfileComponent, 

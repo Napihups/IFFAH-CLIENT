@@ -128,3 +128,13 @@
 	overflow-wrap: break-word !important;
 }
 
+.error-input{
+	box-shadow: 0 0 5px red !important;
+	/*box-shadow: 0 0 5px #C4183C !important;*/
+	border-bottom: none !important;
+}
+
+.errorForm-text{
+	color:red;
+	font-style: italic;
+}
