@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { PassportService } from '../../../services/passport.service';
 
 @Component({
   selector: 'app-finance',
@@ -8,12 +9,13 @@ import { Component, OnInit } from '@angular/core';
 export class FinanceComponent implements OnInit {
 
 /** ---------- STATES VARIABLES --------------------------*/
-finance_status: number = 0;
+finance_status: number;
 /** -----------------------------------------------------*/
 
-  constructor() { }
+  constructor(private PassportService : PassportService) { }
 
   ngOnInit() {
+  		this.finance_status = this.PassportService.getFinanceModState();
   }
 
 }

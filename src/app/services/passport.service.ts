@@ -68,13 +68,30 @@ export class PassportService {
 		localStorage.clear();
 	}
 
-/** IN CONSIDERATION -------------------------*/
+
 	getUserSession() {
 	    if(this.isAuthenticated()){
 	      return JSON.parse(localStorage.getItem('accSession'));
 	    } else {
 	      return null;
 	    }
+	}
+
+	getFinanceModState() : number {
+		if(this.isAuthenticated()){
+			let fstates = JSON.parse(localStorage.getItem('accSession')).module_states.finance;
+			return fstates;
+		} else {
+			return null;
+		}
+	}
+
+	changeFinanceState(number) : void {
+		if(this.isAuthenticated()) {
+			let session = JSON.parse(localStorage.getItem('accSession'));
+			session.module_states.finance = number;
+			localStorage.setItem('accSession', JSON.stringify(session));
+		}
 	}
 
 }

@@ -1,5 +1,6 @@
 import { Component, OnInit, ViewChild, AfterViewInit } from '@angular/core';
 import { FormValidationService } from '../../../services/form-validation.service';
+import { PassportService } from '../../../services/passport.service';
 
 @Component({
   selector: 'app-f-setup',
@@ -34,7 +35,8 @@ formError: string = '';
 
 /**--------------------------------------------------------------*/
   constructor(
-  			private FormVService : FormValidationService
+  			private FormVService : FormValidationService,
+        private PassportService : PassportService
   	) { }
 
   ngOnInit() {
@@ -72,7 +74,7 @@ formError: string = '';
 
   	let vResult = this.FormVService.validateFinanceSetupForm(formValues);
   	if(vResult === 'clear'){
-
+      this.PassportService.changeFinanceState(1);
   	} else {
   		this.displayFormError(vResult);
   	}

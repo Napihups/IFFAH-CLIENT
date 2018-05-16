@@ -7,6 +7,7 @@ import { LeafHouseComponent } from './components/leaf-house/leaf-house.component
 import { FinanceComponent } from './components/finance/finance.component';
 import { FSetupComponent } from './components/f-setup/f-setup.component';
 import { AuthGuard } from '../services/auth-guard.service';
+import { FinanceGuard } from '../services/finance-guard.service';
 
 
 
@@ -35,7 +36,8 @@ const route :Routes = [
 				path: 'finance', component: FinanceComponent
 			},
 			{
-				path: 'finance/setup', component : FSetupComponent
+				path: 'finance/setup', component : FSetupComponent ,
+				canActivate : [FinanceGuard]
 			}
 		]
 	}
