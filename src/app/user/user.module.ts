@@ -11,6 +11,8 @@ import { LeafHouseComponent } from './components/leaf-house/leaf-house.component
 import { FinanceComponent } from './components/finance/finance.component';
 import { FSetupComponent } from './components/f-setup/f-setup.component';
 import { FinanceGuard } from '../services/finance-guard.service';
+import { WebSocketService } from '../services/web-socket.service';
+import { AppContext } from '../app-context.service';
 
 
 @NgModule({
@@ -29,7 +31,9 @@ import { FinanceGuard } from '../services/finance-guard.service';
   ],
   providers: [
 
-      FinanceGuard
+      FinanceGuard,
+      WebSocketService,
+      AppContext
   ]
 })
 export class UserModule { }

@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { PassportService } from '../../../services/passport.service';
-
+import { WebSocketService } from '../../../services/web-socket.service';
+import { AppContext } from '../../../app-context.service';
 @Component({
   selector: 'app-finance',
   templateUrl: './finance.component.html',
@@ -9,13 +10,21 @@ import { PassportService } from '../../../services/passport.service';
 export class FinanceComponent implements OnInit {
 
 /** ---------- STATES VARIABLES --------------------------*/
-finance_status: number;
+financeState: number;
 /** -----------------------------------------------------*/
 
-  constructor(private PassportService : PassportService) { }
+  constructor(private PassportService : PassportService,
+  			private Context : AppContext,
+  			private Socket : WebSocketService) { 
+  }
 
   ngOnInit() {
-  		this.finance_status = this.PassportService.getFinanceModState();
+  	this.Context.getFState().subscribe(data => {
+  		this.financeState = data;
+  	})
   }
+
+
+ 
 
 }
