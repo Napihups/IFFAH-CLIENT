@@ -21,6 +21,18 @@ doy_day: string;
 formError: string = '';
 
 
+/** ---------------- FORM DEFAULT VALUES ----------------------------*/
+currenciesOptions : Array<string> = ['USD','SGD','EUR','RMS'];
+
+dayOfWeekOptions : Array<string> = ['Sunday', 'Monday','Tuesday','Wednesday',
+'Thursday','Friday','Saturday'];
+
+
+dayOfMonthOptions : Array<string> = ['01', '02','03','04','05','06',
+'07', '08','09','10','11','12','13','14','15','16','17','18','19','20', '21'
+,'22','23','24','25','26','27','28']
+
+
 @ViewChild('sBtnW') btnWeek;
 @ViewChild('sBtnM') btnMonth;
 @ViewChild('sBtnY') btnYear;
@@ -73,8 +85,9 @@ formError: string = '';
   	}
 
   	let vResult = this.FormVService.validateFinanceSetupForm(formValues);
-  	if(vResult === 'clear'){
-      this.PassportService.changeFinanceState(1);
+  	if(vResult.success === true){
+      console.log("Clear to submit form !!!")
+      console.log(vResult.result);
   	} else {
   		this.displayFormError(vResult);
   	}
@@ -108,7 +121,7 @@ formError: string = '';
 
  /*-------------------------------------------------------------------------------------*/
   displayFormError(error): void {
-  	switch(error){
+  	switch(error.result){
   		case 'renumAmount': {
   			this.renumInput.nativeElement.classList.add('error-input');
   			this.formError = 'Please enter your Renum Amount ! ';

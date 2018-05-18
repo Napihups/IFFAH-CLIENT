@@ -19,37 +19,47 @@ export class FormValidationService {
 	}
 
 
-	validateFinanceSetupForm(form): string {
+	validateFinanceSetupForm(form): any {
 		if(form.typeSelected === undefined) {
-			return 'type';
+			return {success: false, result: 'type'};
+			// return 'type';
 		} else if(form.renumAmount === undefined) {
-			return 'renumAmount';
+			return {success: false, result: 'renumAmount'};
+			// return 'renumAmount';
 		} else if(form.baseCurrency === undefined) {
-			return 'baseCurrency';
+			return {success: false, result: 'baseCurrency'};
+			// return 'baseCurrency';
 		}
 		else {
 			switch(form.typeSelected){
 				case 'W' : {
 					if(form.dow === undefined){
-						return 'dow';
+						return {success: false, result: 'dow'};
+						// return 'dow';
 					} else {
-						return 'clear';
+						return {success: true, result: form};
+						// return 'clear';
 					}
 				}
 				case 'M' : {
 					if(form.dom === undefined){
-						return 'dom';
+						return {success: false, result: 'dom'};
+						// return 'dom';
 					} else {
-						return 'clear';
+						return {success: true, result: form};
+						// return 'clear';
 					}
 				}
 				case 'Y' : {
 					if(form.doy_month === undefined){
-						return "doy_month";
+						return {success: false, result: 'doy_month'};
+						// return "doy_month";
 					} else if(form.doy_day === undefined) {
-						return 'doy_day';
+						return {success: false, result: 'doy_day'};
+						// return 'doy_day';
 					} else {
-						return 'clear';
+						return {success: true, result: form};
+						// return 'clear';
 					}
 				}
 			}

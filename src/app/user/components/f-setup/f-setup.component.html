@@ -38,9 +38,10 @@
 										<label>Base Currency </label>
 										<select #baseCInput 
 										[(ngModel)]="baseCurrency" name="basedCurrency" class="form-control">
-											<option>USD</option>
-											<option>SGD</option>
-											<option>RM</option>
+											<option *ngFor ="let val of currenciesOptions">
+												{{val}}
+											</option>
+							
 										</select>
 									</div>
 								</div>
@@ -52,9 +53,9 @@
 							
 									<label>Pick Day of week</label>
 									<select #dowInput [(ngModel)]="dow" name="dow" class="form-control ">
-										<option>Saturday</option>
-										<option>Sunday</option>
-										<option>Monday</option>
+										<option *ngFor="let val of dayOfWeekOptions">
+											{{val}}
+										</option>
 									</select>
 								
 							</div>
@@ -63,9 +64,10 @@
 							
 									<label>Pick Day of Month</label>
 									<select #domInput [(ngModel)]="dom" name="dom" class="form-control ">
-										<option>01</option>
-										<option>02</option>
-										<option>03</option>
+										<option *ngFor="let val of dayOfMonthOptions">
+											{{val}}
+										</option>
+										
 									</select>
 								
 							</div>

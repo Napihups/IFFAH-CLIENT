@@ -37,19 +37,6 @@ export class WebSocketService {
 	}
 
 
-	/** -----------------------------------------------------------------*/
-	//		Observables
-	/** -----------------------------------------------------------------*/
-	finance_states() {
-		let observable = new Observable(obs => {
-			this.socket.on('give:finance_states', (result) => {
-				obs.next(result);
-			});
-			return () => {this.socket.disconnect();}
-		})
-		return observable;
-	}
-
 
 	/** -----------------------------------------------------------------*/
 	//		SETTERS AND GETTERS
