@@ -26,6 +26,7 @@ export class AppContext implements OnInit {
 	}
 
 
+
 	private reInitializeContext(): void {
 		this.Socket.askFinanceState(this.Passport.getUserSession().uid);
 	}
