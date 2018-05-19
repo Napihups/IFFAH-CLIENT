@@ -78,6 +78,19 @@
     background: #545e68 !important;
 }
 
+.btn-transparent{
+    background: transparent !important;
+    color: #545e68 !important;
+    text-decoration: underline !important;
+    border: none;
+}
+
+.bg-white{
+    background: white !important;
+    border: 1px solid #dadada !important;
+    /*color: #dadada !important;*/
+}
+
 .c-white{
     color:white !important;
 }

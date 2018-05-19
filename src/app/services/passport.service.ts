@@ -60,19 +60,23 @@ export class PassportService {
 	    }
 	}
 
+
+
 	clearSessionData(){
 		this.token = null;
 		this.account = null;
 		localStorage.clear();
 	}
 
-/** IN CONSIDERATION -------------------------*/
-	// getAccountDetail() {
-	//     if(this.isAuthenticated()){
-	//       return JSON.parse(localStorage.getItem('user'));
-	//     } else {
-	//       return null;
-	//     }
-	// }
+
+	getUserSession() {
+	    if(this.isAuthenticated()){
+	      return JSON.parse(localStorage.getItem('accSession'));
+	    } else {
+	      return null;
+	    }
+	}
+
+	
 
 }

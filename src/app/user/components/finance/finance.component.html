@@ -1,0 +1,51 @@
+
+<div class="container-fluid" style="background:; height: 100vh;">
+	<div class="row">
+
+
+		<div id="finance" class="col-md-10">
+			
+			<div class="row margin-cont">
+				<div class="col-md-12" style="background:">
+
+					<div *ngIf="financeState === 0" class="card card-body text-center">
+						<h1> You have not yet setup your finance, </h1>
+						<p>Click the button below to start !</p>
+				
+						<button [routerLink]="['/user/finance/setup']" class="btn btn-sm bg-main c-white">Setup finance now !</button>
+					</div>
+
+					<div *ngIf="financeState === 1" class="card card-body text-center">
+						dvevevevev
+						
+					</div>
+
+					<div *ngIf="financeState === null" class="text-center">
+						<!-- <div class="row" style="background: purple"></div> -->
+						<i class="loading fa-spin fas fa-spinner"></i><br>
+						<span class="text-muted">Finance is Loading</span>
+					</div>
+					
+					<!-- <div id ="cf-header" class="row">
+						<div class="col-md-7" style="background:;">
+							<h1 class="main-clock"><span>26</span> more days to next Deposit </h1>
+						</div>
+					
+					</div>  -->
+
+
+				</div>
+			</div>
+
+
+
+		</div>
+
+
+<!---------------------------------------------------------------------------->
+		<div class="col-md-2 right-component">
+			<notice-board></notice-board>
+		</div>
+		
+	</div>
+</div>

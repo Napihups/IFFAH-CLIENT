@@ -1,0 +1,130 @@
+<div class="container-fluid" style="background:; height: 100vh;">
+	<div class="row">
+
+
+		<div id="f-setup" class="col-md-10">
+			
+			<div class="row margin-cont">
+				<div class="col-md-12" style="background:">
+
+					<form class="form-fsetup">
+						<h1 class="d-in">Finance Setup</h1>
+						<div class="form-body">
+							<div class="form-group" style="background:">
+								<label>Choose Account type <br> <span class="text-muted form-helper-text">Finance will commence based on either weekly, monthly or annually .</span> </label>
+								<div class="select-btn-panel text-center">
+
+									<div class="btn-gp-select">
+										<div #sBtnW (click)="selectBtnClick('W')" class="btn btn-sm bg-white btn-option">
+											<p>Weekly</p><span>Financing based on day of week </span>
+										</div>
+										<div #sBtnM (click)="selectBtnClick('M')" class="btn btn-sm bg-white btn-option">
+											<p>Monthly</p><span>Financing based on day of month</span>
+										</div>
+										<div #sBtnY (click)="selectBtnClick('Y')" class="btn btn-sm bg-white btn-option">
+											<p>Year</p><span>Financing based on date of year </span>
+										</div>
+									</div>
+									
+								</div>
+							</div>
+							<div class="form-group ">
+								<div class="row">
+									<div class="col-md-6">
+										<label>Base Renumeration value</label>
+										<input #renumInput [(ngModel)]="renumAmount" name="renumAmount" class="form-control" type="number">
+									</div>
+									<div class="col-md-6">
+										<label>Base Currency </label>
+										<select #baseCInput 
+										[(ngModel)]="baseCurrency" name="basedCurrency" class="form-control">
+											<option *ngFor ="let val of currenciesOptions">
+												{{val}}
+											</option>
+							
+										</select>
+									</div>
+								</div>
+							</div>
+
+
+
+							<div *ngIf="typeSelected === 'W'" class="form-group setup " style="margin-top: 40px">
+							
+									<label>Pick Day of week</label>
+									<select #dowInput [(ngModel)]="dow" name="dow" class="form-control ">
+										<option *ngFor="let val of dayOfWeekOptions">
+											{{val}}
+										</option>
+									</select>
+								
+							</div>
+
+							<div *ngIf="typeSelected === 'M'" class="form-group setup" style="margin-top: 40px">
+							
+									<label>Pick Day of Month</label>
+									<select #domInput [(ngModel)]="dom" name="dom" class="form-control ">
+										<option *ngFor="let val of dayOfMonthOptions">
+											{{val}}
+										</option>
+										
+									</select>
+								
+							</div>
+							<div *ngIf="typeSelected === 'Y'" class="form-group setup " style="margin-top: 40px">
+								<label>Pick Date of year</label>
+								<div class="row" style="background:">
+									
+									<div class="col-md-6">
+										<div class="form-group">
+											<span class="text-muted">Select Month</span>
+											<select #doyMonthInput 
+											[(ngModel)]="doy_month" name="doy_month" class="form-control">
+												<option>Jan</option>
+												<option>Feb</option>
+												<option>March</option>
+											</select>
+										</div>
+									</div>
+									<div class="col-md-6">
+										<div class="form-group">
+											<span class="text-muted">Select Day</span>
+											<select #doyDayInput [(ngModel)]="doy_day" name="doy_day" class="form-control">
+												<option>01</option>
+												<option>02</option>
+												<option>03</option>
+											</select>
+										</div>
+									</div>	
+								</div>							
+							</div>
+							<div class="form-note">
+								<h4>Please take note !</h4>
+								<p class="text-muted ">Ensure that you have selected the correct type for your finance account, once confirm you cannot change but you can still edit your Renum value</p>
+								<p class="errorForm-text" *ngIf="formError != ''">{{formError}}</p>
+							</div>
+
+							<div class="btn-gp text-right">
+								<div (click)="doSubmitFinanceSetup()" class="btn btn-sm bg-main c-white">Confirm</div>
+								<div [routerLink]="['/user/finance']" class="btn btn-sm btn-transparent">Cancel</div>
+							</div>
+
+						</div>
+					</form>
+
+
+				</div>
+			</div>
+
+
+
+		</div>
+
+
+<!---------------------------------------------------------------------------->
+		<div class="col-md-2 right-component">
+			<notice-board></notice-board>
+		</div>
+		
+	</div>
+</div>
