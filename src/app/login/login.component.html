@@ -27,6 +27,7 @@
         </div>
 
             <span *ngIf="hasError" class="error"> {{errorMsg}} ! </span>
+            <span *ngIf="loginMessage" class="loginMsg">Logging in ... <i class="loading fa-spin fas fa-spinner"></i></span>
             <div class="form-group">
             	<a (click)="doUserLogin()" class="btn btn-md btn-login">Sign in</a>
             </div>

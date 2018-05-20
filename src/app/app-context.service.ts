@@ -8,6 +8,10 @@ export class AppContext implements OnInit {
 
 
 	/** ------------------- COMPONENTS DATA ----------------------------*/
+	// COMMONS ------------------------------------------//
+	private server_domain: string = 'http://localhost:3310';
+
+
 	// private financeState:number = undefined;
 	private fState = new BehaviorSubject<any>(null);
 	private $castfState = this.fState.asObservable();
@@ -52,6 +56,11 @@ export class AppContext implements OnInit {
 
 	public getFState(){
 		return this.$castfState;
+	}
+
+
+	public getServerDomain(): string {
+		return this.server_domain;
 	}
 
 

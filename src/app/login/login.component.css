@@ -122,3 +122,11 @@ a.btn-login:hover{
     background:;
     font-style: italic;
 }
+
+.loginMsg{
+    color: #30D5C7;
+    padding: 0px;
+    margin: 0px;
+    background:;
+    font-style: italic;
+}

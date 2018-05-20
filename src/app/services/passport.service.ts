@@ -77,6 +77,14 @@ export class PassportService {
 	    }
 	}
 
+
+	createAuthRequestHeader(): Headers {
+		let headers = new Headers();
+		headers.append('Context-Type', 'application/json');
+		headers.append('Authorization', localStorage.getItem('t_id'));
+		return headers;
+	}
+
 	
 
 }

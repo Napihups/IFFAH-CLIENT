@@ -1,6 +1,7 @@
 import { Component, OnInit, ViewChild, AfterViewInit } from '@angular/core';
 import { FormValidationService } from '../../../services/form-validation.service';
 import { PassportService } from '../../../services/passport.service';
+import { FinanceService } from '../../../services/finance-flow.service';
 
 @Component({
   selector: 'app-f-setup',
@@ -38,6 +39,7 @@ dayOfMonthOptions : Array<string> = ['01', '02','03','04','05','06',
 @ViewChild('sBtnY') btnYear;
 
 /** form input elements */
+@ViewChild('formsetup') formsetup;
 @ViewChild('renumInput') renumInput;
 @ViewChild('baseCInput') baseCInput;
 @ViewChild('dowInput') dowInput;
@@ -48,7 +50,8 @@ dayOfMonthOptions : Array<string> = ['01', '02','03','04','05','06',
 /**--------------------------------------------------------------*/
   constructor(
   			private FormVService : FormValidationService,
-        private PassportService : PassportService
+        private PassportService : PassportService,
+        private FinanceService : FinanceService
   	) { }
 
   ngOnInit() {
@@ -65,6 +68,7 @@ dayOfMonthOptions : Array<string> = ['01', '02','03','04','05','06',
   /**-----------------------------------------------------------------------------*/
   selectBtnClick(code){
   	this.clearFormError();
+    this.clearSetupFormInput();
   	this.typeSelected = code;
   	this.toggleSelectButton();
   }
@@ -88,6 +92,19 @@ dayOfMonthOptions : Array<string> = ['01', '02','03','04','05','06',
   	if(vResult.success === true){
       console.log("Clear to submit form !!!")
       console.log(vResult.result);
+      // this.FinanceService.startFinance(vResult.result); on beta
+      this.FinanceService.startFinance(vResult.result).subscribe(
+        data => {
+        console.log(data);
+        },
+        err => {
+          let errJson = JSON.parse(JSON.stringify(err));
+          if(errJson.status === 401){
+            if(errJson.statusText === 'Unauthorized'){
+              console.log('Sorry you are not authorized to access this page ');
+            }
+          }
+        });
   	} else {
   		this.displayFormError(vResult);
   	}
@@ -182,6 +199,13 @@ dayOfMonthOptions : Array<string> = ['01', '02','03','04','05','06',
 		
 		
 	}
+
+  /*-------------------------------------------------------------------------------------*/
+  clearSetupFormInput(): void {
+    this.formsetup.nativeElement.reset();
+    // only base currency input is not reset properly...
+    this.baseCInput.nativeElement.value = '';
+  }
 
 
   

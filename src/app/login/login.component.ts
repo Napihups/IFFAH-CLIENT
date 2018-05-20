@@ -33,6 +33,7 @@ export class LoginComponent implements OnInit, AfterViewInit {
   password: string;
   hasError: boolean = false;
   errorMsg: string;
+  loginMessage: boolean = false;
   //-----------------------------------------------//
 
 
@@ -42,6 +43,7 @@ export class LoginComponent implements OnInit, AfterViewInit {
   }
 
   doUserLogin(){
+    this.loginMessage = true;
     this.clearFormError();
     let form = {
       username: this.username,
@@ -51,9 +53,11 @@ export class LoginComponent implements OnInit, AfterViewInit {
     let val = this.FormService.validateLoginForm(form);
     if(val === "username") {
       /** if user not entering username */
+      this.loginMessage = false;
       this.displayFormError("Please enter your username");
     } else if( val === "password"){
       /** if user not entering password */
+      this.loginMessage = false;
       this.displayFormError("Please enter your password");
     } 
 
@@ -65,6 +69,7 @@ export class LoginComponent implements OnInit, AfterViewInit {
             this.Router.navigate(['/user']);
             console.log(data.acc);
           } else {
+            this.loginMessage = false;
             this.displayFormError(data.msg);
           }
         });

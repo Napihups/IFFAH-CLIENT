@@ -1,6 +1,9 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
+import { HttpModule } from '@angular/http';
+import { HttpClientModule } from '@angular/common/http';
+
 import { ProfileComponent } from './components/profile/profile.component';
 import { RepositoryComponent } from './components/repository/repository.component';
 import { UserMainComponent } from './components/user-main/user-main.component';
@@ -13,13 +16,15 @@ import { FSetupComponent } from './components/f-setup/f-setup.component';
 import { FinanceGuard } from '../services/finance-guard.service';
 import { WebSocketService } from '../services/web-socket.service';
 import { AppContext } from '../app-context.service';
+import { FinanceService } from '../services/finance-flow.service';
 
 
 @NgModule({
   imports: [
     CommonModule,
     UserModuleRouting,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
   declarations: [
   	ProfileComponent, 
@@ -33,7 +38,8 @@ import { AppContext } from '../app-context.service';
 
       FinanceGuard,
       WebSocketService,
-      AppContext
+      AppContext,
+      FinanceService
   ]
 })
 export class UserModule { }
