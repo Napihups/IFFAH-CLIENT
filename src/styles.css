@@ -124,6 +124,7 @@
     .navbar-wrapper{
       width: 1300px !important;
       margin: 0 auto;
+      /*background: green;*/
     }
 }
 

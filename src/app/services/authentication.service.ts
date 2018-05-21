@@ -12,10 +12,21 @@ export class AuthenticationService {
 
 
 	// -------- NON AUTH REQUEST -----------------//
+/** ---------------------------------------------------------------------------------*/
 	authenticateUserLogin(form) {
 		let headers = new Headers();
 		headers.append('Content-type', 'application/json');
 		return this.http.post('http://localhost:3310/account/login', form,
+			{headers: headers})
+		.map(res => res.json());
+	}
+
+
+/** ---------------------------------------------------------------------------------*/
+	registerNewUser(form) {
+		let headers = new Headers();
+		headers.append('Content-type', 'application/json');
+		return this.http.post('http://localhost:3310/account/register', form,
 			{headers: headers})
 		.map(res => res.json());
 	}

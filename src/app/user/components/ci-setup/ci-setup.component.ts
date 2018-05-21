@@ -1,18 +1,17 @@
-import { Component, OnInit, ViewChild, AfterViewInit } from '@angular/core';
+import { Component, OnInit, AfterViewInit, ViewChild } from '@angular/core';
 import { FormValidationService } from '../../../services/form-validation.service';
 import { PassportService } from '../../../services/passport.service';
 import { FinanceService } from '../../../services/finance-flow.service';
 import { CashinventoryService} from '../../../services/cash-inventory.service';
 
 @Component({
-  selector: 'app-f-setup',
-  templateUrl: './f-setup.component.html',
-  styleUrls: ['./f-setup.component.css']
+  selector: 'app-ci-setup',
+  templateUrl: './ci-setup.component.html',
+  styleUrls: ['./ci-setup.component.css']
 })
-export class FSetupComponent implements OnInit, AfterViewInit {
+export class CiSetupComponent implements OnInit, AfterViewInit {
 
-
-/** ------------------STATES VARIABLES -------------------------*/
+	/** ------------------STATES VARIABLES -------------------------*/
 typeSelected: string = 'W';
 renumAmount: string;
 baseCurrency: string;
@@ -64,9 +63,7 @@ dayOfMonthOptions : Array<string> = ['01', '02','03','04','05','06',
   }
 
 
-
-
-  /** ---------------------------FUNCTIONS ---------------------------------------*/
+   /** ---------------------------FUNCTIONS ---------------------------------------*/
   /**-----------------------------------------------------------------------------*/
   selectBtnClick(code){
   	this.clearFormError();
@@ -221,8 +218,5 @@ dayOfMonthOptions : Array<string> = ['01', '02','03','04','05','06',
     // only base currency input is not reset properly...
     this.baseCInput.nativeElement.value = '';
   }
-
-
-  
 
 }

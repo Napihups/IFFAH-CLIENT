@@ -83,4 +83,45 @@
 	font-size: 17px;
 }
 
+.formError{
+	color:red;
+	font-size: 15px;
+	font-style: italic;
+	font-weight: lighter;
+	padding-bottom: 10px;
+}
+
+
+/** ----- Banner ---------*/
+
+.banner-cont{
+	/*background: black;*/
+	/*border: 1px solid black;*/
+	border-bottom: 1px solid #30D5C7;
+	width: 70%;
+	margin: auto auto;
+	margin-top: 150px;
+	height: auto;
+	padding: 10px;
+}
+
+.banner-cont p {
+	font-size : 20px;
+	color: #fff;
+}
+
+.l-btn {
+	/*font-weight: bold;*/
+	color: #032747;
+	font-size: 17px;
+	padding-left: 30px;
+	padding-right: 30px;
+}
+
+.load-registerDone {
+	color: #30D5C7;
+	font-size: 40px;
+	margin-bottom: 10px;
+}
+
 

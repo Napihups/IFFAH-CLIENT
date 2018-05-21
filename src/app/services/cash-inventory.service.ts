@@ -8,7 +8,7 @@ import { FinanceSetupModel } from '../models/finance-setup.model';
 
 
 @Injectable()
-export class FinanceService {
+export class CashinventoryService {
 
 
 	constructor(private http: HttpClient,
@@ -19,23 +19,25 @@ export class FinanceService {
 
 
 	/** REST API ENDPOINT -------------------*/
-	public startFinance(financeSetup) {
+	public startCashInventory(cashInventorySetup) {
 		
 		let financeForm = {
 			uid: this.Passport.getUserSession().uid,
 			properties : {
-				acc_type : financeSetup.typeSelected,
-				renumeration_amount : financeSetup.renumAmount,
-				base_currency : financeSetup.baseCurrency,
-				setup_command : this.createSetupCommand(financeSetup)
+				acc_type : cashInventorySetup.typeSelected,
+				renumeration_amount : cashInventorySetup.renumAmount,
+				base_currency : cashInventorySetup.baseCurrency,
+				setup_command : this.createSetupCommand(cashInventorySetup)
 			},
 			detail : {
-			
+
 			}
 		}
 		let headers = new HttpHeaders().set('Authorization', this.Passport.getAuthToken());
-		//XXX //
-		return this.http.post('http://localhost:3310/finance/start', financeForm, {headers});
+
+		return this.http.post(this.Context.getServerDomain() + 
+			'/cashInventory/start', 
+			financeForm, {headers});
 	}
 
 

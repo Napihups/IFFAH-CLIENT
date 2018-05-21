@@ -17,6 +17,9 @@ import { FinanceGuard } from '../services/finance-guard.service';
 import { WebSocketService } from '../services/web-socket.service';
 import { AppContext } from '../app-context.service';
 import { FinanceService } from '../services/finance-flow.service';
+import { CashinventoryService } from '../services/cash-inventory.service';
+import { CashInventoryComponent } from './components/cash-inventory/cash-inventory.component';
+import { CiSetupComponent } from './components/ci-setup/ci-setup.component';
 
 
 @NgModule({
@@ -32,14 +35,15 @@ import { FinanceService } from '../services/finance-flow.service';
   	UserMainComponent, 
   	NavbarComponent, 
   	NoticeBoardComponent, 
-    LeafHouseComponent, FinanceComponent, FSetupComponent
+    LeafHouseComponent, FinanceComponent, FSetupComponent, CashInventoryComponent, CiSetupComponent
   ],
   providers: [
 
       FinanceGuard,
       WebSocketService,
       AppContext,
-      FinanceService
+      FinanceService,
+      CashinventoryService
   ]
 })
 export class UserModule { }

@@ -1,6 +1,6 @@
 
 <div class="signup">
-    <div class="container signup-box">
+    <div *ngIf="showRegisterForm" class="container signup-box">
       <div class="row">
         <div class="col-md-6 left-box" style="background: ;">
           <img src ="../../assets/images/icon6.PNG" class="img-fluid">
@@ -9,26 +9,43 @@
           <form class="form">
             <h1>Sign up</h1>
             <div class="form-group">
-              <input type="text" class="form-control" placeholder="New Username">
+              <input #usernameInput [(ngModel)]="username" (keyup.enter)= "doRegisterUser()" name="username" type="text" class="form-control" placeholder="New Username">
             </div>
             <div class="form-group">
-              <input type="email" class="form-control" placeholder="Email">
+              <input #emailInput [(ngModel)]="email" (keyup.enter)= "doRegisterUser()" name="email" type="email" class="form-control" placeholder="Email">
             </div>
             <div class="form-group">
-              <input type="password" class="form-control" placeholder="password">
+              <input #passwordInput [(ngModel)]="password" (keyup.enter)= "doRegisterUser()" name="password" type="password" class="form-control" placeholder="password">
             </div>
             <div class="form-group">
-              <input type="password" class="form-control" placeholder="Confirm password">
+              <input #confirmPasswordInput [(ngModel)]="confirmPassword" 
+              (keyup.enter)= "doRegisterUser()" name="confirmPassword" type="password" class="form-control" placeholder="Confirm password">
             </div>
+            <div *ngIf="hasError" class="form-group">
+               <span class="formError">{{formError}}</span>
+            </div>
+           <!--  <span *ngIf="hasError" class="formError">{{formError}}</span> -->
             <div class="form-group form-inline">
               <a class="login-link mr-auto" href="/"> Login </a>
-              <button class="btn btn-sm btn-signup">Sign up</button>
+              <div (click) = "doRegisterUser()" class="btn btn-sm btn-signup">Sign up</div>
             </div>
 
           </form>
 
         </div>
       </div>
+    </div>
+
+
+    <!--    Banner after register successfully -->
+    <div *ngIf="showBanner" class ="container banner-cont text-center">
+        <p class="banner-text">You have successfully registered, click button below to login .</p>
+        <div [routerLink]="['/login']" class="btn btn-sm bg-main l-btn">Proceed to Login</div>
+    </div>
+
+    <div *ngIf="regLoading" class ="container banner-cont text-center">
+        <i class="load-registerDone fa-spin fas fa-spinner"></i>
+        <p class="banner-text">Hold on for a while, validation is in progress .</p>
     </div>
 
   </div>

@@ -15,12 +15,12 @@ export class FinanceGuard implements CanActivate {
 
 	 canActivate(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): boolean {
 
-	 	if(state.url === '/user/finance/setup'){
+	 	if(state.url === '/user/ci/setup'){
 	 			if(this.Context.getFState().subscribe(data => {
 			 		if(data === 0){
 			 			return true;
 			 		} else if(data === 1){
-			 			this.Router.navigate(['/user/finance']);
+			 			this.Router.navigate(['/user/cash-inventory']);
 			 		}
 			 	}))
 			 	// if(this.PassportService.getFinanceModState() === 0){
