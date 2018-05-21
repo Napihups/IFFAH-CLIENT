@@ -9,22 +9,22 @@
 			<div class="row margin-cont">
 				<div class="col-md-12" style="background:">
 
-					<div *ngIf="financeState === 0" class="card card-body text-center">
+					<div *ngIf="cashInventoryState === 0" class="card card-body text-center">
 						<h1> You have not yet setup your cash inventory, </h1>
 						<p>Click the button below to start !</p>
 				
 						<button [routerLink]="['/user/ci/setup']" class="btn btn-sm bg-main c-white">Setup finance now !</button>
 					</div>
 
-					<div *ngIf="financeState === 1" class="card card-body text-center">
-						dvevevevev
+					<div *ngIf="cashInventoryState === 1" class="card card-body text-center">
+						Cash inventory Begins !!!
 						
 					</div>
 
-					<div *ngIf="financeState === null" class="text-center">
+					<div *ngIf="cashInventoryState === null" class="text-center">
 						<!-- <div class="row" style="background: purple"></div> -->
 						<i class="loading fa-spin fas fa-spinner"></i><br>
-						<span class="text-muted">Finance is Loading</span>
+						<!-- <span class="text-muted">Cash inventory is Loading</span> -->
 					</div>
 					
 					<!-- <div id ="cf-header" class="row">

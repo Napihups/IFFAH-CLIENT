@@ -13,8 +13,8 @@ export class AppContext implements OnInit {
 
 
 	// private financeState:number = undefined;
-	private fState = new BehaviorSubject<any>(null);
-	private $castfState = this.fState.asObservable();
+	private ciState = new BehaviorSubject<any>(null);
+	private $castCiState = this.ciState.asObservable();
 
 
 	constructor(private Socket: WebSocketService,
@@ -37,12 +37,13 @@ export class AppContext implements OnInit {
 
 	private subscribeAll() : void {
 		this.Socket.getFinanceStateObservable()
-	  	.subscribe((fstate: {success:boolean, payload:any}) => {
-	  		if(fstate.success) {
+	  	.subscribe((data: {success:boolean, payload:any}) => {
+	  		if(data.success) {
 	  			// this.financeState = fstate.payload;
-	  			this.fState.next(fstate.payload);
+	  			console.log(data.payload);
+	  			this.ciState.next(data.payload);
 	  		} else {
-	  			this.fState.next(null);
+	  			this.ciState.next(null);
 	  			// this.financeState = null;
 	  		}
 	  	})
@@ -55,7 +56,7 @@ export class AppContext implements OnInit {
 	// }
 
 	public getFState(){
-		return this.$castfState;
+		return this.$castCiState;
 	}
 
 

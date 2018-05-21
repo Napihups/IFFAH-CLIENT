@@ -15,8 +15,9 @@ export class WebSocketService {
 
 	/** ---------------------------------------------------------*/
 	private socket;
-	private $financeState: Observable<any> = new Observable(obs => {
-			this.socket.on('give:finance_states', (result) => {
+
+	private $ciState: Observable<any> = new Observable(obs => {
+			this.socket.on('give:ci_state', (result) => {
 				obs.next(result);
 			});
 			return () => {this.socket.disconnect();}
@@ -33,7 +34,7 @@ export class WebSocketService {
 	//		Asking 
 	/** -----------------------------------------------------------------*/
 	askFinanceState(uid) {
-		this.socket.emit('ask:finance_states', uid);
+		this.socket.emit('ask:ci_state', uid);
 	}
 
 
@@ -42,7 +43,7 @@ export class WebSocketService {
 	//		SETTERS AND GETTERS
 	/** -----------------------------------------------------------------*/
 	getFinanceStateObservable(): Observable<any> {
-		return this.$financeState;
+		return this.$ciState;
 	}
 	
 }

@@ -12,7 +12,8 @@ export class CashInventoryComponent implements OnInit {
 
 
 /** ---------- STATES VARIABLES --------------------------*/
-	financeState: number;
+  cashInventoryState : number = null;
+
 /** -----------------------------------------------------*/
 
 
@@ -22,7 +23,7 @@ export class CashInventoryComponent implements OnInit {
 
   ngOnInit() {
   	this.Context.getFState().subscribe(data => {
-  		this.financeState = data;
+  		this.cashInventoryState = data;
   	})
   }
 
