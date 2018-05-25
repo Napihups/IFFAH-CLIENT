@@ -20,5 +20,4 @@ export class UserMainComponent implements OnInit {
   
   }
 
-
 }

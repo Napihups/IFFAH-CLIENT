@@ -20,7 +20,13 @@ import { FinanceService } from '../services/finance-flow.service';
 import { CashinventoryService } from '../services/cash-inventory.service';
 import { CashInventoryComponent } from './components/cash-inventory/cash-inventory.component';
 import { CiSetupComponent } from './components/ci-setup/ci-setup.component';
+import { CiDashboardComponent } from './components/ci-dashboard/ci-dashboard.component';
 
+// -------------- DOM DIRECTIVES ----------------------//
+import { SrTabDirective } from '../dom-directives/srTabDom.directive';
+import { DashboardTabDirective } from '../dom-directives/dashboardTabDom.directive';
+import { CiLoansComponent } from './components/ci-loans/ci-loans.component';
+import { CiSrComponent } from './components/ci-sr/ci-sr.component';
 
 @NgModule({
   imports: [
@@ -35,7 +41,13 @@ import { CiSetupComponent } from './components/ci-setup/ci-setup.component';
   	UserMainComponent, 
   	NavbarComponent, 
   	NoticeBoardComponent, 
-    LeafHouseComponent, FinanceComponent, FSetupComponent, CashInventoryComponent, CiSetupComponent
+    LeafHouseComponent, FinanceComponent, FSetupComponent, 
+    CashInventoryComponent, CiSetupComponent, CiDashboardComponent
+    ,
+    SrTabDirective,
+    DashboardTabDirective,
+    CiLoansComponent,
+    CiSrComponent
   ],
   providers: [
 

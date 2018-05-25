@@ -14,7 +14,10 @@
 .side-bar-header{
     padding-left: 10px;
     background:;
-    margin-top: 80px;
+    margin-top: 60px;
+    height: 60px;
+    line-height: 40px !important;
+    padding-top: 10px;
     font-size: 15px;
     font-weight: bold;
     /*font-family: 'Josefin Sans', sans-serif !important;*/

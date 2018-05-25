@@ -8,6 +8,9 @@ import { FinanceComponent } from './components/finance/finance.component';
 import { CashInventoryComponent } from './components/cash-inventory/cash-inventory.component';
 import { FSetupComponent } from './components/f-setup/f-setup.component';
 import { CiSetupComponent } from './components/ci-setup/ci-setup.component';
+import { CiDashboardComponent } from './components/ci-dashboard/ci-dashboard.component';
+import { CiLoansComponent } from './components/ci-loans/ci-loans.component';
+import { CiSrComponent } from './components/ci-sr/ci-sr.component';
 import { AuthGuard } from '../services/auth-guard.service';
 import { FinanceGuard } from '../services/finance-guard.service';
 
@@ -32,7 +35,22 @@ const route :Routes = [
 				path:'repository', component: RepositoryComponent
 			},
 			{
-				path: 'cash-inventory', component: CashInventoryComponent
+				path: 'cash-inventory', component: CashInventoryComponent,
+
+					children :[
+						{
+							path: '', redirectTo : 'dashboard', pathMatch: 'full'
+						},
+						{
+							path: 'dashboard', component : CiDashboardComponent
+						},
+						{
+							path: 'loans', component : CiLoansComponent
+						},
+						{
+							path: 'sr', component : CiSrComponent
+						}
+					]
 			},
 			{
 				path: 'ci/setup', component : CiSetupComponent ,

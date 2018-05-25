@@ -7,32 +7,52 @@
 		<div id="cashInventory" class="col-md-10">
 			
 			<div class="row margin-cont">
-				<div class="col-md-12" style="background:">
+				<div [ngSwitch]="cashInventoryState" class="col-md-12" style="background:">
 
-					<div *ngIf="cashInventoryState === 0" class="card card-body text-center">
+					<!--------------    CASH INVENTORY LAYOUT -------------------------------->
+
+					<div *ngSwitchCase="'1'" class="ci-section">
+						<!-- *ngIf="cashInventoryState === 1" -->
+						<ul class="nav justify-content-end ci-nav">
+							<h1 class="ci-nav-header">Cash - Inventory</h1>
+						  <li sr-tab #srTab (click)="doToggleTab('sr')"
+						  [routerLink]="['/user/cash-inventory/sr']" class="nav-item">
+						    <a class="nav-link">SR</a>
+						  </li>
+						  <li #loansTab (click)="doToggleTab('loans')" 
+						  [routerLink]="['/user/cash-inventory/loans']" class="nav-item">
+						    <a class="nav-link">Loans</a>
+						  </li>
+						  <li dashboard-tab #dashboardTab (click)="doToggleTab('dashboard')" 
+						   [routerLink]="['/user/cash-inventory/dashboard']" class="nav-item">
+						    <a class="nav-link">Dashboard</a>
+						  </li>
+						</ul>
+
+						<div class="ci-content-box">
+							<router-outlet></router-outlet> 
+						</div>
+						
+					</div>
+
+
+
+					<div  *ngSwitchCase="'0'" class="card card-body text-center ci-zero">
+						<!-- *ngIf="cashInventoryState === 0" -->
 						<h1> You have not yet setup your cash inventory, </h1>
 						<p>Click the button below to start !</p>
 				
 						<button [routerLink]="['/user/ci/setup']" class="btn btn-sm bg-main c-white">Setup finance now !</button>
 					</div>
 
-					<div *ngIf="cashInventoryState === 1" class="card card-body text-center">
-						Cash inventory Begins !!!
-						
-					</div>
 
-					<div *ngIf="cashInventoryState === null" class="text-center">
+					<div  *ngSwitchCase="'null'" class="text-center ">
+						<!-- *ngIf="cashInventoryState === null" -->
 						<!-- <div class="row" style="background: purple"></div> -->
 						<i class="loading fa-spin fas fa-spinner"></i><br>
 						<!-- <span class="text-muted">Cash inventory is Loading</span> -->
 					</div>
-					
-					<!-- <div id ="cf-header" class="row">
-						<div class="col-md-7" style="background:;">
-							<h1 class="main-clock"><span>26</span> more days to next Deposit </h1>
-						</div>
-					
-					</div>  -->
+
 
 
 				</div>

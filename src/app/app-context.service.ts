@@ -12,7 +12,6 @@ export class AppContext implements OnInit {
 	private server_domain: string = 'http://localhost:3310';
 
 
-	// private financeState:number = undefined;
 	private ciState = new BehaviorSubject<any>(null);
 	private $castCiState = this.ciState.asObservable();
 

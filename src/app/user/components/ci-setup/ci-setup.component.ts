@@ -94,7 +94,7 @@ dayOfMonthOptions : Array<string> = ['01', '02','03','04','05','06',
       // this.FinanceService.startFinance(vResult.result); on beta
       this.CashinventoryService.startCashInventory(vResult.result).subscribe(
         data => {
-          console.log(data);
+          console.log("Test : ", data);
         },
         err => {
           let errJson = JSON.parse(JSON.stringify(err));

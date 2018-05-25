@@ -17,11 +17,11 @@ export class WebSocketService {
 	private socket;
 
 	private $ciState: Observable<any> = new Observable(obs => {
-			this.socket.on('give:ci_state', (result) => {
-				obs.next(result);
-			});
-			return () => {this.socket.disconnect();}
+		this.socket.on('give:ci_state', (result) => {
+			obs.next(result);
 		});
+		return () => {this.socket.disconnect();}
+	});
 	/** ---------------------------------------------------------*/
 
 
