@@ -17,6 +17,9 @@ export class CashInventoryComponent implements OnInit, AfterViewInit {
   @ViewChild("loansTab") set contentloans(content: ElementRef){
     this.loansTab = content;
   } ;
+  @ViewChild("lbTab") set contentLb(content: ElementRef){
+    this.lbTab = content;
+  }
   @ViewChild("dashboardTab") set contentdashboard(content: ElementRef){
     this.dashboardTab = content;
   };
@@ -26,6 +29,7 @@ export class CashInventoryComponent implements OnInit, AfterViewInit {
   private srTab : ElementRef;
   private loansTab : ElementRef;
   private dashboardTab : ElementRef;
+  private lbTab : ElementRef;
 
 
   tabSwitch: string = '';
@@ -81,6 +85,7 @@ export class CashInventoryComponent implements OnInit, AfterViewInit {
             this.dashboardTab.nativeElement.classList.add('active');
             this.loansTab.nativeElement.classList.remove('active');
             this.srTab.nativeElement.classList.remove('active');
+            this.lbTab.nativeElement.classList.remove('active');
           }
           break;
         case "loans":
@@ -88,6 +93,7 @@ export class CashInventoryComponent implements OnInit, AfterViewInit {
             this.loansTab.nativeElement.classList.add('active');
             this.dashboardTab.nativeElement.classList.remove('active');
             this.srTab.nativeElement.classList.remove('active');
+            this.lbTab.nativeElement.classList.remove('active');
           }
           break;
         case "sr":
@@ -95,8 +101,16 @@ export class CashInventoryComponent implements OnInit, AfterViewInit {
             this.srTab.nativeElement.classList.add('active');
             this.loansTab.nativeElement.classList.remove('active');
             this.dashboardTab.nativeElement.classList.remove('active');
+            this.lbTab.nativeElement.classList.remove('active');
           }
           break;
+         case "liabilities":
+           {
+             this.lbTab.nativeElement.classList.add('active');
+             this.srTab.nativeElement.classList.remove('active');
+              this.loansTab.nativeElement.classList.remove('active');
+              this.dashboardTab.nativeElement.classList.remove('active');
+           }
         
         default:
           // code...

@@ -1,0 +1,42 @@
+#lb-sect {
+	margin-top: 20px;
+}
+
+#lb-sect .b-edit:hover{
+	background: #324a5f;
+	color:white;
+}
+
+#lb-sect .b-edit{
+	border: 1px solid #dadada;
+	border-radius: 3px;
+}
+
+
+#lb-sect .b-trash:hover{
+	/*background: #C4183C;*/
+	color:#C4183C;
+}
+
+#lb-sect .select-acc{
+	width: 400px;
+	/*height: 40px;*/
+	float: right;
+}
+
+#lb-sect .custom-select{
+	height: 35px !important;
+}
+
+#lb-sect .btn-new{
+	/*margin-top: 0px;*/
+	float:right;
+	margin-left: 10px;
+	height: 35px !important;
+	padding-top: 6px;
+}
+
+#lb-sect .b-clip{
+	color: #82878b;
+	/*font-size: 20px;*/
+}

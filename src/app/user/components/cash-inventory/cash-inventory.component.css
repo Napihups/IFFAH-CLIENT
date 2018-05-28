@@ -68,7 +68,8 @@
 }*/
 
 .ci-nav-header{
-	margin-right: 50%;
+	background: ;
+	/*margin-right: 50%;*/
 	padding-top: 15px;
 	font-size: 25px;
 
@@ -76,15 +77,14 @@
 
 
 .ci-nav{
-	background:;
 	height: 60px;
 	vertical-align: center;
 	padding: 0 0 !important;
 	padding-right: 0px !important;
 	line-height: 25px;
 	/*background: #dadada;*/
-	background: transparent;
-	border-bottom: 1px solid #bdbfc2;
+	background: ;
+	/*border-bottom: 1px solid #bdbfc2;*/
 	/*border: 1px solid #bdbfc2;*/
 }
 

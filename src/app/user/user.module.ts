@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { HttpClientModule } from '@angular/common/http';
+// import { MdDialogModule } from '@angular/material';
 
 import { ProfileComponent } from './components/profile/profile.component';
 import { RepositoryComponent } from './components/repository/repository.component';
@@ -27,13 +28,16 @@ import { SrTabDirective } from '../dom-directives/srTabDom.directive';
 import { DashboardTabDirective } from '../dom-directives/dashboardTabDom.directive';
 import { CiLoansComponent } from './components/ci-loans/ci-loans.component';
 import { CiSrComponent } from './components/ci-sr/ci-sr.component';
+import { CiLiabilitiesComponent } from './components/ci-liabilities/ci-liabilities.component';
+import { ModalRemoveLbComponent } from './modals/modal-remove-lb/modal-remove-lb.component';
 
 @NgModule({
   imports: [
     CommonModule,
     UserModuleRouting,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    // MdDialogModule
   ],
   declarations: [
   	ProfileComponent, 
@@ -47,7 +51,9 @@ import { CiSrComponent } from './components/ci-sr/ci-sr.component';
     SrTabDirective,
     DashboardTabDirective,
     CiLoansComponent,
-    CiSrComponent
+    CiSrComponent,
+    CiLiabilitiesComponent,
+    ModalRemoveLbComponent
   ],
   providers: [
 

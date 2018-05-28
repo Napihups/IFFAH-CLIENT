@@ -12,4 +12,8 @@ export class CiDashboardComponent implements OnInit {
   ngOnInit() {
   }
 
+  test(){
+  	console.log("Paper Clip Clicked");
+  }
+
 }

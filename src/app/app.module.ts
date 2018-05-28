@@ -35,7 +35,7 @@ import { UserModule } from './user/user.module';
     FormsModule,
     HttpModule,
     appRoute,
-    UserModule
+    UserModule,
   ],
   providers: [ 
     AuthenticationService,

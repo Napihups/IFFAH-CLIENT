@@ -11,6 +11,7 @@ import { CiSetupComponent } from './components/ci-setup/ci-setup.component';
 import { CiDashboardComponent } from './components/ci-dashboard/ci-dashboard.component';
 import { CiLoansComponent } from './components/ci-loans/ci-loans.component';
 import { CiSrComponent } from './components/ci-sr/ci-sr.component';
+import { CiLiabilitiesComponent} from './components/ci-liabilities/ci-liabilities.component';
 import { AuthGuard } from '../services/auth-guard.service';
 import { FinanceGuard } from '../services/finance-guard.service';
 
@@ -49,6 +50,9 @@ const route :Routes = [
 						},
 						{
 							path: 'sr', component : CiSrComponent
+						},
+						{
+							path: 'liabilities', component : CiLiabilitiesComponent
 						}
 					]
 			},

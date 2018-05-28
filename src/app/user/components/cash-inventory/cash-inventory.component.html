@@ -13,11 +13,41 @@
 
 					<div *ngSwitchCase="'1'" class="ci-section">
 						<!-- *ngIf="cashInventoryState === 1" -->
-						<ul class="nav justify-content-end ci-nav">
-							<h1 class="ci-nav-header">Cash - Inventory</h1>
+						<div class="row" style="border-bottom: 1px solid #dadada">
+							<div class="col-md-3">
+								<h1 class="ci-nav-header">Cash - Inventory</h1>
+							</div>
+							<div class="col-md-9">
+								<ul class="nav justify-content-end ci-nav ">
+							
+								  <li #srTab (click)="doToggleTab('sr')"
+								  [routerLink]="['/user/cash-inventory/sr']" class="nav-item">
+								    <a class="nav-link">SR</a>
+								  </li>
+								  <li #loansTab (click)="doToggleTab('loans')" 
+								  [routerLink]="['/user/cash-inventory/loans']" class="nav-item">
+								    <a class="nav-link">Loans</a>
+								  </li>
+								  <li #lbTab (click)="doToggleTab('liabilities')" 
+								  [routerLink]="['/user/cash-inventory/liabilities']" class="nav-item">
+								    <a class="nav-link">Liabilities</a>
+								  </li>
+								  <li dashboard-tab #dashboardTab (click)="doToggleTab('dashboard')" 
+								   [routerLink]="['/user/cash-inventory/dashboard']" class="nav-item">
+								    <a class="nav-link">Dashboard</a>
+								  </li>
+								</ul>
+							</div>
+						</div>
+						<!-- <ul class="nav justify-content-end ci-nav">
+							
 						  <li sr-tab #srTab (click)="doToggleTab('sr')"
 						  [routerLink]="['/user/cash-inventory/sr']" class="nav-item">
 						    <a class="nav-link">SR</a>
+						  </li>
+						  <li #loansTab (click)="doToggleTab('loans')" 
+						  [routerLink]="['/user/cash-inventory/loans']" class="nav-item">
+						    <a class="nav-link">Loans</a>
 						  </li>
 						  <li #loansTab (click)="doToggleTab('loans')" 
 						  [routerLink]="['/user/cash-inventory/loans']" class="nav-item">
@@ -27,7 +57,7 @@
 						   [routerLink]="['/user/cash-inventory/dashboard']" class="nav-item">
 						    <a class="nav-link">Dashboard</a>
 						  </li>
-						</ul>
+						</ul> -->
 
 						<div class="ci-content-box">
 							<router-outlet></router-outlet> 
@@ -46,7 +76,7 @@
 					</div>
 
 
-					<div  *ngSwitchCase="'null'" class="text-center ">
+					<div  *ngSwitchCase="null" class="text-center ">
 						<!-- *ngIf="cashInventoryState === null" -->
 						<!-- <div class="row" style="background: purple"></div> -->
 						<i class="loading fa-spin fas fa-spinner"></i><br>

@@ -16,6 +16,14 @@
     padding: 0px 0px;
 }
 
+.bg-one{
+    background: #324a5f;
+}
+
+.c-one{
+    color: white;
+}
+
 .digit{
     font-family: 'Pacifico', cursive !important;
 }
