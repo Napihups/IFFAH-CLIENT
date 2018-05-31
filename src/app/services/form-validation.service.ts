@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import { LiabilityModel } from '../models/liability.model';
 
 @Injectable()
 export class FormValidationService {
@@ -101,4 +102,24 @@ export class FormValidationService {
 		}
 		
 	}
+
+/** ------------------------------------------------------------------------------*/
+
+	validateNewLbForm(form: LiabilityModel) {
+		if(form.title === undefined || form.title === null){
+			return {success: false, data: 'title'}
+		} 
+
+		else if(form.type === undefined || form.type === null){
+			return {success: false, data: 'type'};
+		}
+		else if(form.liableAmt === undefined || form.liableAmt <= 0) {
+			return {success: false, data: 'amount'}
+		} 
+
+		else {
+			return {success: true, data: form};
+		}
+	}
+
 }

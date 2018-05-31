@@ -1,0 +1,65 @@
+<div class="modal fade" #modalAddComp id="addLbModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog cust-modal" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Add New Liability</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form id="addLbForm" class="form">
+          
+            <div class="form-group">
+              <label class="f-label">Title</label>
+              <input #titleInput [(ngModel)]="title" type="text" class="form-control" name="title" 
+              id="titleInput">
+            </div>
+          
+         
+            <!-- <div class="form-group">
+              <label>Type</label>
+              <select  #typeInput [(ngModel)]="type" class="form-control" name="type">
+                <option>Standard Loan</option>
+                <option>Bill</option>
+              </select>
+            </div> -->
+
+            <div class="form-group">
+              <label class="f-label">Type</label>
+              <div #typeComp class="form-control type-checkbox">
+                <label class="radio-inline">
+                  <input type="radio" value ="Standard Loan" name="type" [(ngModel)]="type"> Standard Loan
+                </label>
+                <label class="radio-inline">
+                  <input type="radio" value ="Bill" name="type" [(ngModel)]="type"> Bill
+                </label>
+                 <label class="radio-inline">
+                  <input type="radio" value ="Allowances" name="type" [(ngModel)]="type"> Allowances
+                </label>
+              </div>
+            </div>
+         
+       
+            <div class="form-group">
+              <label class="f-label">Liable Amount <span class="text-muted" 
+                style="font-style: italic; margin-left: 20px;">
+              How much you will disbursed each week ?</span></label>
+              <div class="input-group mb-2">
+                <div class="input-group-prepend">
+                  <div class="input-group-text"><i class="fas fa-dollar-sign"></i></div>
+                </div>
+                <input #liableAmtInput [(ngModel)]="liableAmt" name= "liableAmt" type="number" class="form-control" id="inlineFormInputGroup" placeholder="Amount">
+              </div>
+            </div>
+          
+        </form>
+      </div>
+      <div class="modal-footer">
+        <p *ngIf="hasError" class="form-err">{{formErrorMsg}} !</p>
+        <button (click)="closeModal()" type="button" class="btn btn-sm btn-secondary" data-dismiss="modal">Close</button>
+        <button (click)="addNewLiability()" type="button" class="btn btn-sm bg-main c-white">Confirm Add</button>
+      </div>
+    </div>
+  </div>
+</div>

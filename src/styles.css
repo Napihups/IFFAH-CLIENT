@@ -4,6 +4,8 @@
 @import url('https://fonts.googleapis.com/css?family=IBM+Plex+Sans:700i');
 @import url('https://fonts.googleapis.com/css?family=Fredoka+One|Poppins:500');
 @import url('https://fonts.googleapis.com/css?family=Pacifico');
+/*@import "~ngx-smart-modal/ngx-smart-modal";
+@import "app/app.component";*/
 
 #body{
     background: #e9ebee;

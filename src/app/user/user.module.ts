@@ -3,7 +3,6 @@ import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { HttpClientModule } from '@angular/common/http';
-// import { MdDialogModule } from '@angular/material';
 
 import { ProfileComponent } from './components/profile/profile.component';
 import { RepositoryComponent } from './components/repository/repository.component';
@@ -30,14 +29,14 @@ import { CiLoansComponent } from './components/ci-loans/ci-loans.component';
 import { CiSrComponent } from './components/ci-sr/ci-sr.component';
 import { CiLiabilitiesComponent } from './components/ci-liabilities/ci-liabilities.component';
 import { ModalRemoveLbComponent } from './modals/modal-remove-lb/modal-remove-lb.component';
+import { ModalAddLbComponent } from './modals/modal-add-lb/modal-add-lb.component';
 
 @NgModule({
   imports: [
     CommonModule,
     UserModuleRouting,
     FormsModule,
-    HttpClientModule,
-    // MdDialogModule
+    HttpClientModule
   ],
   declarations: [
   	ProfileComponent, 
@@ -53,7 +52,8 @@ import { ModalRemoveLbComponent } from './modals/modal-remove-lb/modal-remove-lb
     CiLoansComponent,
     CiSrComponent,
     CiLiabilitiesComponent,
-    ModalRemoveLbComponent
+    ModalRemoveLbComponent,
+    ModalAddLbComponent
   ],
   providers: [
 

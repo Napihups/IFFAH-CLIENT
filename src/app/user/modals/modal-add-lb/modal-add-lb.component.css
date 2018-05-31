@@ -1,0 +1,42 @@
+#addLbModal .cust-modal{
+	/*margin-top: 200px;*/
+	/*margin: 100px auto !important;*/
+	/*margin-right: 400px;*/
+	max-width: 700px !important;
+}
+
+#addLbModal .form .form-control{
+	background: transparent;
+	border: none;
+	border-bottom: 1px solid #30D5C7;
+	border-radius: 0px;
+}
+
+#addLbModal .form .form-control:focus{
+/*	outline: 0px !important;
+	box-shadow: none;
+	outline: 1px solid #30D5C7 !important;*/
+	box-shadow: 0 0 5px #30D5C7 !important;
+	/*box-shadow: 0 0 5px #C4183C !important;*/
+	border-bottom: none !important;
+}
+
+#addLbModal .form-err{
+	color: #C4183C;
+	margin-right: 200px;
+	font-style: italic;
+}
+
+#addLbModal .input-error {
+	box-shadow: 0 0 5px red !important;
+	/*box-shadow: 0 0 5px #C4183C !important;*/
+	border-bottom: none !important;
+}
+
+#addLbModal .f-label{
+	color: #30D5C7;
+}
+
+#addLbModal .type-checkbox .radio-inline{
+	margin-right: 30px !important;
+}

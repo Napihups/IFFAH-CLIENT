@@ -8,7 +8,8 @@
 			<div class="col-md-6 text-right" style="background: ">
 				<div class="">
 					
-					<div class="btn btn-sm bg-main c-white btn-new">
+					<div data-toggle="modal" data-target="#addLbModal" 
+					class="btn btn-sm bg-main c-white btn-new">
 						<i class="fas fa-plus"></i> New
 					</div>
 
@@ -42,16 +43,16 @@
 			  <tbody>
 			  	<tr *ngFor="let lb of lbList; let i = index">
 			  		<th scope="row">{{i + 1}}</th>
-			  		<td>{{lb.lbTitle}}</td>
-			  		<td>{{lb.lbType}}</td>
-			  		<td>{{lb.liableAmt}}</td>
-			  		<td>{{lb.lbStatus}}</td>
-			  		<td><span class="badge bg-warning c-dark">{{lb.lbRemark}}</span></td>
+			  		<td>{{lb.title}}</td>
+			  		<td>{{lb.type}}</td>
+			  		<td><i class="fas fa-dollar-sign"></i> {{lb.liableAmt}}</td>
+			  		<td>{{lb.status}}</td>
+			  		<td><span class="badge bg-warning c-dark">{{lb.remark}}</span></td>
 			  		<!-- <td>{{lb.lbRemark}}</td> -->
 			  		<td>
 			      	<div class="">
 			      		<!-- (click)="openRmvDialog({{lbTitle}})" -->
-			      		<div (click)="openRmvDialog(lb.lbTitle)" 
+			      		<div (click)="openRmvDialog(lb.title)" 
 			      		class="btn btn-sm b-trash" 
 			      		data-toggle="modal" data-target="#rmvLbModal">
 			      			<i class="far fa-trash-alt"></i>
@@ -62,64 +63,7 @@
 			      	</div>
 			      </td>
 			  	</tr>
-			    <!-- <tr>
-			      <th scope="row">1</th>
-			      <td>HDB</td>
-			      <td>Standard loan</td>
-			      <td>$199</td>
-			      <td><span class="">Normal</span></td>
-			      <td></td>
-			      <td>
-			      	<div class="">
-			      		<div (click)="openRmvDialog({{lbTitle}})" class="btn btn-sm b-trash" 
-			      		data-toggle="modal" data-target="#rmvLbModal">
-			      			<i class="far fa-trash-alt"></i>
-			      		</div>
-			      		<div class="btn btn-sm b-edit">
-			      			<i class="fas fa-pencil-alt"></i>
-			      		</div>
-			      	</div>
-			      </td>
-			    </tr>
-			     <tr>
-			      <th scope="row">2</th>
-			      <td>Mobile - singtel</td>
-			      <td>Bill</td>
-			      <td>$80</td>
-			      <td><span class="">Normal</span></td>
-			       <td><span class="badge bg-warning c-dark">Re-update</span></td>
-			      <td>
-			      	<div class="">
-			      		<div (click)="openRmvDialog({{lbTitle}})" class="btn btn-sm b-trash">
-			      			<i class="far fa-trash-alt"></i>
-			      		</div>
-			      		<div class="btn btn-sm b-edit">
-			      			<i class="fas fa-pencil-alt"></i>
-			      		</div>
-			      		<div class="btn btn-sm b-clip">
-			      			<i class="fas fa-paperclip"></i>
-			      		</div>
-			      	</div>
-			      </td>
-			    </tr>
-			    <tr>
-			      <th scope="row">3</th>
-			      <td>SPA Group</td>
-			      <td>Bill</td>
-			      <td>$180</td>
-			      <td><span class="">Normal</span></td>
-			      <td></td>
-			      <td>
-			      	<div class="">
-			      		<div (click)="openRmvDialog({{lbTitle}})" class="btn btn-sm b-trash">
-			      			<i class="far fa-trash-alt"></i>
-			      		</div>
-			      		<div class="btn btn-sm b-edit">
-			      			<i class="fas fa-pencil-alt"></i>
-			      		</div>
-			      	</div>
-			      </td>
-			    </tr> -->
+			   
 			    
 			  </tbody>
 			</table>
@@ -127,5 +71,5 @@
 	</div>
 </div>
 
-
 <modal-remove-lb [lbTitle] = "rmvLbModalData"></modal-remove-lb>
+<modal-add-lb></modal-add-lb>

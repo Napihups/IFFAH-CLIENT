@@ -18,12 +18,6 @@ import { AuthGuard } from './services/auth-guard.service';
 //----------APP MODULES -----------------------------//
 import { UserModule } from './user/user.module';
 
-
-
-
-
-
-
 @NgModule({
   declarations: [
     AppComponent,
@@ -35,7 +29,8 @@ import { UserModule } from './user/user.module';
     FormsModule,
     HttpModule,
     appRoute,
-    UserModule,
+    UserModule
+
   ],
   providers: [ 
     AuthenticationService,
