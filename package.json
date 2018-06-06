@@ -28,6 +28,7 @@
     "popper.js": "^1.14.3",
     "rxjs": "^5.5.6",
     "save": "^2.3.2",
+    "shards-ui": "^2.0.3",
     "socket.io-client": "^2.1.0",
     "zone.js": "^0.8.19"
   },

@@ -30,6 +30,8 @@ import { CiSrComponent } from './components/ci-sr/ci-sr.component';
 import { CiLiabilitiesComponent } from './components/ci-liabilities/ci-liabilities.component';
 import { ModalRemoveLbComponent } from './modals/modal-remove-lb/modal-remove-lb.component';
 import { ModalAddLbComponent } from './modals/modal-add-lb/modal-add-lb.component';
+import { NtDashboardComponent } from './components/nt-dashboard/nt-dashboard.component';
+import { NtNavbarComponent } from './components/nt-navbar/nt-navbar.component';
 
 @NgModule({
   imports: [
@@ -53,7 +55,9 @@ import { ModalAddLbComponent } from './modals/modal-add-lb/modal-add-lb.componen
     CiSrComponent,
     CiLiabilitiesComponent,
     ModalRemoveLbComponent,
-    ModalAddLbComponent
+    ModalAddLbComponent,
+    NtDashboardComponent,
+    NtNavbarComponent
   ],
   providers: [
 

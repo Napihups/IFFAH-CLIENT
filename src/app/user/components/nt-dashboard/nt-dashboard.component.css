@@ -1,0 +1,103 @@
+
+
+.list-group{
+	list-style-type: none;
+	display: inline-block;
+}
+
+.list-group li{
+	background:;
+	display: inline-block;
+	/*font-size: 30px;*/
+	/*margin: 0px 70px;*/
+	/*color: #7f7f7f;*/
+}
+
+.number-pill {
+
+	/*border: 1px solid currentColor;
+	border-radius: 5px;
+	background: #30D5C7;
+	padding: 0px;
+	font-weight: bold;*/
+}
+
+.number-pill p{
+	font-size: 30px;
+	font-weight: bold;
+	/*background: #30D5C7;*/
+	padding-bottom: 0px !important;
+}
+
+.text-pill{
+	font-size: 15px;
+	font-weight: bold;
+}
+
+.bank-board-btn-panel{
+	margin-top: 20px;
+	border-top: 1px solid #dadada;
+	background: ;
+	padding-bottom: 0px;
+}
+
+.bank-board-btn-panel .btn-panel{
+	background:  ;
+	/*padding: 20px;*/
+	padding-top: 23px;
+	text-align: center;
+}
+
+.progress-sm{
+	height: 7px;
+}
+
+.bank-board-btn-panel .pb{
+	background: ;
+	padding: 20px;
+	text-align: center;
+}
+
+.ntcard-header{
+	font-size: 20px;
+	/*font-weight: bold;*/
+	padding-bottom: 0px;
+	margin-bottom: 0px;
+}
+
+#account-card .pill{
+	background:;
+	text-align: center;
+}
+
+#account-card .pill p{
+	background: ;
+	margin-bottom: 0px;
+	font-size: 17px;
+	font-weight: bold;
+}
+
+.item-table td{
+/*	background: yellow;
+	border: 1px solid gray;*/
+	line-height: 30px; 
+}
+
+
+.item-table .item-ind {
+	width:8px;
+	height: 8px;
+	border-radius: 50%;
+	float:left;
+	padding: 0px;
+	margin-top: 10px;
+}
+
+.item-table .title{
+	float: left;
+	margin-left: 20px;
+	background: ;
+	/*margin-top: 5px;*/
+	font-weight: bold;
+}
+

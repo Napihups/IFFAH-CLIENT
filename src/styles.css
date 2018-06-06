@@ -60,7 +60,7 @@
 }
 
 .bg-danger{
-    background: #C4183C !important;
+    background: #c0063b !important;
 }
 
 .bg-light{
@@ -79,6 +79,10 @@
     background: #ff0000 !important;
 }
 
+.bg-blue{
+    background:  #007ffb !important;
+}
+
 
 .bg-green{
     background: #1e801a !important;
@@ -88,12 +92,6 @@
     background: #545e68 !important;
 }
 
-.btn-transparent{
-    background: transparent !important;
-    color: #545e68 !important;
-    text-decoration: underline !important;
-    border: none;
-}
 
 .bg-white{
     background: white !important;
@@ -129,7 +127,7 @@
 }
 
 
-@media only screen and (min-width:1400px) {
+/*@media only screen and (min-width:1400px) {
     .app-wrapper {
         border-right: 0.5px solid #dadada;
         width: 1400px;
@@ -138,9 +136,8 @@
     .navbar-wrapper{
       width: 1300px !important;
       margin: 0 auto;
-      /*background: green;*/
     }
-}
+}*/
 
 
 ::-webkit-scrollbar {
@@ -174,3 +171,64 @@
 box-shadow: -3px 1px 10px -2px rgba(187,189,189,1);*/
 
 }
+
+
+/* ================ redesigned btn classess =============================*/
+
+.btn-primary{
+    background: #30D5C7;
+    border-color: transparent;
+    color: white; 
+}
+
+.btn-primary:hover{
+    background: #27b8ab !important;
+    border-color:transparent !important; 
+}
+
+.btn-primary:focus{
+    box-shadow: none !important;
+    outline: none !important;
+}
+
+.btn-primary:active{
+    box-shadow: none !important;
+    outline: none !important;
+    background: #30D5C7 !important;
+    border-color: transparent !important; 
+}
+
+.btn-transparent{
+    background: transparent;
+    border-color: transparent;
+    color: black; 
+}
+
+.btn-transparent:hover{
+    background: transparent !important;
+    border-color:transparent !important; 
+}
+
+.btn-transparent:focus{
+    box-shadow: none !important;
+    outline: none !important;
+}
+
+.btn-transparent:active{
+    box-shadow: none !important;
+    outline: none !important;
+    background: transparent !important;
+    border-color: transparent !important; 
+}
+
+.btn-white{
+    background: white;
+    border:1px solid #dee2e6;
+}
+
+.btn-white:hover{
+    background: #cccccc;
+    /*border:1px solid #dee2e6;*/
+    /*color: white;*/
+}
+

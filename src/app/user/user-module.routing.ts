@@ -16,6 +16,10 @@ import { AuthGuard } from '../services/auth-guard.service';
 import { FinanceGuard } from '../services/finance-guard.service';
 
 
+// import NT components ---------------------//
+import { NtDashboardComponent } from './components/nt-dashboard/nt-dashboard.component';
+
+
 
 const route :Routes = [
 
@@ -24,43 +28,55 @@ const route :Routes = [
 		
 			canActivate: [AuthGuard],
 
+
 		children: [
 
 			{
-				path:'', redirectTo: 'cash-inventory', pathMatch: 'full'
+				path: '', redirectTo: 'dashboard', pathMatch: 'full'
 			},
 			{
-				path:'profile', component: ProfileComponent
-			},
-			{
-				path:'repository', component: RepositoryComponent
-			},
-			{
-				path: 'cash-inventory', component: CashInventoryComponent,
-
-					children :[
-						{
-							path: '', redirectTo : 'dashboard', pathMatch: 'full'
-						},
-						{
-							path: 'dashboard', component : CiDashboardComponent
-						},
-						{
-							path: 'loans', component : CiLoansComponent
-						},
-						{
-							path: 'sr', component : CiSrComponent
-						},
-						{
-							path: 'liabilities', component : CiLiabilitiesComponent
-						}
-					]
-			},
-			{
-				path: 'ci/setup', component : CiSetupComponent ,
-				canActivate : [FinanceGuard]
+				path: 'dashboard', component: NtDashboardComponent
 			}
+
 		]
+
+		// children: [
+
+		// 	{
+		// 		path:'', redirectTo: 'cash-inventory', pathMatch: 'full'
+		// 	},
+		// 	{
+		// 		path:'profile', component: ProfileComponent
+		// 	},
+		// 	{
+		// 		path:'repository', component: RepositoryComponent
+		// 	},
+		// 	{
+		// 		path: 'cash-inventory', component: CashInventoryComponent,
+
+		// 			children :[
+		// 				{
+		// 					path: '', redirectTo : 'dashboard', pathMatch: 'full'
+		// 				},
+		// 				{
+		// 					path: 'dashboard', component : CiDashboardComponent
+		// 				},
+		// 				{
+		// 					path: 'loans', component : CiLoansComponent
+		// 				},
+		// 				{
+		// 					path: 'sr', component : CiSrComponent
+		// 				},
+		// 				{
+		// 					path: 'liabilities', component : CiLiabilitiesComponent
+		// 				}
+		// 			]
+		// 	},
+		// 	{
+		// 		path: 'ci/setup', component : CiSetupComponent ,
+		// 		canActivate : [FinanceGuard]
+		// 	}
+		// ]
 	}
 ]
 
