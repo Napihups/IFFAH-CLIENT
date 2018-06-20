@@ -21,17 +21,20 @@ import { CashinventoryService } from '../services/cash-inventory.service';
 import { CashInventoryComponent } from './components/cash-inventory/cash-inventory.component';
 import { CiSetupComponent } from './components/ci-setup/ci-setup.component';
 import { CiDashboardComponent } from './components/ci-dashboard/ci-dashboard.component';
+import { LiabilitiesRestService } from '../services/liabilities-rest.service';
 
 // -------------- DOM DIRECTIVES ----------------------//
 import { SrTabDirective } from '../dom-directives/srTabDom.directive';
 import { DashboardTabDirective } from '../dom-directives/dashboardTabDom.directive';
-import { CiLoansComponent } from './components/ci-loans/ci-loans.component';
-import { CiSrComponent } from './components/ci-sr/ci-sr.component';
-import { CiLiabilitiesComponent } from './components/ci-liabilities/ci-liabilities.component';
-import { ModalRemoveLbComponent } from './modals/modal-remove-lb/modal-remove-lb.component';
-import { ModalAddLbComponent } from './modals/modal-add-lb/modal-add-lb.component';
+// import { CiLoansComponent } from './components/ci-loans/ci-loans.component';
+// import { CiSrComponent } from './components/ci-sr/ci-sr.component';
+// import { CiLiabilitiesComponent } from './components/ci-liabilities/ci-liabilities.component';
+// import { ModalRemoveLbComponent } from './modals/modal-remove-lb/modal-remove-lb.component';
+// import { ModalAddLbComponent } from './modals/modal-add-lb/modal-add-lb.component';
 import { NtDashboardComponent } from './components/nt-dashboard/nt-dashboard.component';
 import { NtNavbarComponent } from './components/nt-navbar/nt-navbar.component';
+import { NtLiabilitiesComponent } from './components/nt-liabilities/nt-liabilities.component';
+import { ModalCreateLbComponent } from './modals/modal-create-lb/modal-create-lb.component';
 
 @NgModule({
   imports: [
@@ -51,13 +54,15 @@ import { NtNavbarComponent } from './components/nt-navbar/nt-navbar.component';
     ,
     SrTabDirective,
     DashboardTabDirective,
-    CiLoansComponent,
-    CiSrComponent,
-    CiLiabilitiesComponent,
-    ModalRemoveLbComponent,
-    ModalAddLbComponent,
+    // CiLoansComponent,
+    // CiSrComponent,
+    // CiLiabilitiesComponent,
+    // ModalRemoveLbComponent,
+    // ModalAddLbComponent,
     NtDashboardComponent,
-    NtNavbarComponent
+    NtNavbarComponent,
+    NtLiabilitiesComponent,
+    ModalCreateLbComponent
   ],
   providers: [
 
@@ -65,7 +70,8 @@ import { NtNavbarComponent } from './components/nt-navbar/nt-navbar.component';
       WebSocketService,
       AppContext,
       FinanceService,
-      CashinventoryService
+      CashinventoryService,
+      LiabilitiesRestService
   ]
 })
 export class UserModule { }

@@ -1,0 +1,75 @@
+<div class="container-fluid" style="margin-top: 130px;">
+	<div class="row">
+		<div class="col-md-12">
+			<div class="lb-card card">
+				<div class="card-header">
+					<div class="float-left">
+						<span class="ntcard-header">Liabilities</span>
+					</div>
+					<div class="btn-group float-right">
+						<button data-toggle="modal" data-target="#addLbModal" type="button" class="btn btn-white">
+							<i class="fas fa-plus"></i><span style="margin-left: 5px"><i class="far fa-credit-card"></i></span></button>
+					</div>
+				</div>
+				<div class="card-body">
+
+					
+					<table class="table">
+					  <thead>
+					    <tr>
+					      <th scope="col">#</th>
+					      <th scope="col">Item</th>
+					      <th scope="col">Type</th>
+					      <th scope="col">Expected monthly</th>
+					      <th scope="col"></th>
+					    </tr>
+					  </thead>
+					  <tbody>
+					    <tr *ngFor= " let item of lbList; index as i ">
+					      <th scope="row">{{i + 1}}</th>
+					      <td>{{item.title}}</td>
+					      <td>{{item.type}}</td>
+					      <td>$ {{item.expAmount}}</td>
+					      <td>
+					      	<div class="btn-group">
+						      		<button type="button" class="btn btn-sm btn-white"><i class="fas fa-edit"></i></button>
+						      		<button type="button" class="btn btn-sm btn-white"><i class="fas fa-times"></i></button>
+						      	</div>
+					      </td>
+					   <!--  </tr>
+					     <tr>
+					      <th scope="row">1</th>
+					      <td>Mobile - Singtel</td>
+					      <td>Bill</td>
+					      <td>$80.00</td>
+					      <td>
+					      	<div class="btn-group">
+						      		<button type="button" class="btn btn-sm btn-white"><i class="fas fa-edit"></i></button>
+						      		<button type="button" class="btn btn-sm btn-white"><i class="fas fa-times"></i></button>
+						      	</div>
+					      </td>
+					    </tr>
+					     <tr>
+					      <th scope="row">1</th>
+					      <td>Mom Expenses</td>
+					      <td>Others</td>
+					      <td>$300.00</td>
+					      <td>
+					      	<div class="btn-group">
+						      		<button type="button" class="btn btn-sm btn-white"><i class="fas fa-edit"></i></button>
+						      		<button type="button" class="btn btn-sm btn-white"><i class="fas fa-times"></i></button>
+						      	</div>
+					      </td>
+					    </tr> -->
+					   
+					  </tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+<!------------------------------- MODAL TEMPLATES ---------------------------------------------->
+<modal-create-lb></modal-create-lb>

@@ -9,7 +9,7 @@ export class AppContext implements OnInit {
 
 	/** ------------------- COMPONENTS DATA ----------------------------*/
 	// COMMONS ------------------------------------------//
-	private server_domain: string = 'http://localhost:3310';
+	private server_domain: string = 'http://localhost:3310/';
 
 
 	private ciState = new BehaviorSubject<any>(null);

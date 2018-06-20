@@ -1,0 +1,45 @@
+.lb-card{
+	width: 70%;
+	margin:10px auto;
+	/*background: transparent !important;
+	box-shadow: none;
+	border: 0px;*/
+}
+
+.lb-card .card-header{
+	/*background: transparent !important;*/
+}
+
+.lb-card .card-body{
+	background: transparent !important;
+}
+
+.ntcard-header{
+	font-size: 20px;
+	/*font-weight: bold;*/
+	padding-bottom: 0px;
+	margin-bottom: 0px;
+}
+
+.lb-title{
+	line-height: 40px;
+}
+
+.lb-card-btns{
+	margin-top: 5px;
+}
+
+.lb-detail ul{
+	margin-top: 10px;
+	list-style-type: none;
+	margin-left: 0px;
+}
+
+.lb-c{
+	margin-top: 20px;
+}
+
+#addLbModal{
+	/*background: blue !important;*/
+	
+}

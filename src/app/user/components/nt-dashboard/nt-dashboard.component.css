@@ -101,3 +101,30 @@
 	font-weight: bold;
 }
 
+.lf-goal-list{
+	background:;
+	padding-left: 0px;
+}
+
+.lf-goal-list li{
+	margin-bottom: 10px;
+	border: none;
+}
+
+.lf-goal-list .progress-label{
+	font-size: 16px;
+}
+
+.lf-goal-list .a{
+	margin-right: 40px;
+	float:right;
+}
+
+.lf-goal-list .b{
+	/*color: #30D5C7;*/
+}
+.lf-goal-list .progress {
+	height: 7px;
+}
+
+

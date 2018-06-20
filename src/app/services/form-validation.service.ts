@@ -113,7 +113,7 @@ export class FormValidationService {
 		else if(form.type === undefined || form.type === null){
 			return {success: false, data: 'type'};
 		}
-		else if(form.liableAmt === undefined || form.liableAmt <= 0) {
+		else if(form.expAmount === undefined || form.expAmount <= 0) {
 			return {success: false, data: 'amount'}
 		} 
 

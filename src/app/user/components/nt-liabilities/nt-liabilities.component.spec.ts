@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { CiLiabilitiesComponent } from './ci-liabilities.component';
+import { NtLiabilitiesComponent } from './nt-liabilities.component';
 
-describe('CiLiabilitiesComponent', () => {
-  let component: CiLiabilitiesComponent;
-  let fixture: ComponentFixture<CiLiabilitiesComponent>;
+describe('NtLiabilitiesComponent', () => {
+  let component: NtLiabilitiesComponent;
+  let fixture: ComponentFixture<NtLiabilitiesComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ CiLiabilitiesComponent ]
+      declarations: [ NtLiabilitiesComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(CiLiabilitiesComponent);
+    fixture = TestBed.createComponent(NtLiabilitiesComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
